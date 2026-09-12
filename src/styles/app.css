@@ -1,0 +1,10 @@
+/* Shared accessibility and motion behaviour for the Solid frontend. */
+#main:focus { outline: none; }
+.home-page #app { overflow-x: clip; }
+.page-note { white-space: pre-line; }
+.featured-viewport, .viewer-stage, .logo-detail-content { touch-action: pan-y; }
+.viewer-stage > [role="alert"] { position: absolute; inset-inline: 20px; bottom: 15px; padding: 12px; background: #161615; text-align: center; z-index: 3; }
+.viewer-stage > [role="alert"] button { text-decoration: underline; background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,18 @@
+{
+  "mode": "built-in image_gen",
+  "temporary_placeholders": true,
+  "assets": [
+    {
+      "filename": "branding-placeholder.png",
+      "prompt": "Use case: product-mockup. Asset type: temporary photographic artwork placeholder for a graphic designer portfolio, artwork only, never a webpage or interface. Create one horizontal 1536x1024 image with premium editorial still-life photography, deep nearly black #0b0b0a background, dramatic subdued studio side lighting, natural tactile materials, cream paper and muted vermilion accents. Sophisticated art direction, sharp material texture, subtle grain, restrained contrast. No humans, no watermark, no UI, no screenshot, no overlay title, no collage border.\nPrimary request: Art-directed close-up arrangement of business cards and thick brand identity paper cards on dark stone. Various ivory cream and black cards, one muted vermilion red card, beautiful off-axis stacking and layered printed paper forms. Minimal typographic identity marks on different cards with exact text “sōra”, “NOVA”, and “blanc”; abstract black brand symbols printed on cream cards. Composition dense and sophisticated with most objects to the right and some clear dark space to the left. Photographic elevated oblique camera angle. Matte uncoated papers, crisp edges, one subtle debossed mark. Scene fills image, natural perspective."
+    },
+    {
+      "filename": "packaging-placeholder.png",
+      "prompt": "Use case: product-mockup. Asset type: temporary photographic artwork placeholder for a graphic designer portfolio, artwork only, never a webpage or interface. Create one horizontal 1536x1024 image with premium editorial still-life photography, deep nearly black #0b0b0a background, dramatic subdued studio side lighting, natural tactile materials, cream paper and muted vermilion accents. Sophisticated art direction, sharp material texture, subtle grain, restrained contrast. No humans, no watermark, no UI, no screenshot, no overlay title, no collage border.\nPrimary request: Sculptural group of premium ivory and black skincare and coffee packaging boxes, one vermilion box, tubes and jars. Restrained modern typography with exact word “RITUAL” on principal ivory package. Arrange upright and lying flat in a cohesive art-directed product family on dark textured stone. Strong elegant geometric forms with realistic volume and tangible matte materials. Beautiful side light and soft deep shadows. Camera close at a low oblique angle, group fills frame. No added props or people."
+    },
+    {
+      "filename": "editorial-placeholder.png",
+      "prompt": "Use case: product-mockup. Asset type: temporary photographic artwork placeholder for a graphic designer portfolio, artwork only, never a webpage or interface. Create one horizontal 1536x1024 image with premium editorial still-life photography, deep nearly black #0b0b0a background, dramatic subdued studio side lighting, natural tactile materials, cream paper and muted vermilion accents. Sophisticated art direction, sharp material texture, subtle grain, restrained contrast. No humans, no watermark, no UI, no screenshot, no overlay title, no collage border.\nPrimary request: Overhead and oblique editorial still life of a large open architecture and design book showing beautiful modern typographic page layouts and black-and-white architectural photography. Warm cream paper. A cream cover with exact title “FORMA” is partly visible under the open book. Closed dark and muted vermilion smaller books nearby. Matte black table, sculptural overlapping rectangles, sophisticated book design, realistic bookbinding, paper edges and folds. Fill frame with the books in a close angled composition. No added props or people."
+    }
+  ]
+}

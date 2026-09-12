@@ -1,0 +1,114 @@
+[
+  {
+    "file": "coffee.jpg",
+    "page": "https://unsplash.com/photos/white-ceramic-mug-with-coffee-_vbDz2XLwwo",
+    "photographer": "Brent Ninaber",
+    "alt": "White ceramic cup of dark coffee surrounded by rich brown roasted beans.",
+    "original_image_url": "https://images.unsplash.com/photo-1630338606772-392095666116",
+    "download_url": "https://images.unsplash.com/photo-1630338606772-392095666116?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/coffee.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      1013
+    ],
+    "bytes": 253105
+  },
+  {
+    "file": "lake-canoe.jpg",
+    "page": "https://unsplash.com/photos/a-group-of-people-in-a-canoe-on-a-lake-3j2_KGBPu9g",
+    "photographer": "Keith Tanner",
+    "alt": "Blue canoe on turquoise alpine water, framed by forest and rugged mountains.",
+    "original_image_url": "https://images.unsplash.com/photo-1650509211860-0ac3cc0c8f91",
+    "download_url": "https://images.unsplash.com/photo-1650509211860-0ac3cc0c8f91?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/lake-canoe.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      1200
+    ],
+    "bytes": 521905
+  },
+  {
+    "file": "fashion-rack.jpg",
+    "page": "https://unsplash.com/photos/white-and-black-clothes-hanging-on-black-steel-rack-aMsBglfye2s",
+    "photographer": "Kevin Waltz",
+    "alt": "Black and white garments hanging on a minimal black clothing rack.",
+    "original_image_url": "https://images.unsplash.com/photo-1601926299866-6a5c9bfa6be0",
+    "download_url": "https://images.unsplash.com/photo-1601926299866-6a5c9bfa6be0?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/fashion-rack.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      2520
+    ],
+    "bytes": 535075
+  },
+  {
+    "file": "orange-metro.jpg",
+    "page": "https://unsplash.com/photos/modern-orange-subway-station-with-bright-lighting-zuCvMt_4w8Y",
+    "photographer": "Mikhail Mamaev",
+    "alt": "Orange curved walls and bright ceiling lights in a modern Munich metro station.",
+    "original_image_url": "https://images.unsplash.com/photo-1551179939-b839002d0a18",
+    "download_url": "https://images.unsplash.com/photo-1551179939-b839002d0a18?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/orange-metro.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      1800
+    ],
+    "bytes": 488802
+  },
+  {
+    "file": "alpine-hiker.jpg",
+    "page": "https://unsplash.com/photos/woman-in-red-and-blue-jacket-standing-on-green-grass-field-during-daytime-SR8rckWIwFg",
+    "photographer": "Anders Nielsen",
+    "alt": "Lone hiker with a red backpack on a grassy ridge in the Swiss Alps.",
+    "original_image_url": "https://images.unsplash.com/photo-1630873290741-7349f50d0b52",
+    "download_url": "https://images.unsplash.com/photo-1630873290741-7349f50d0b52?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/alpine-hiker.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      2570
+    ],
+    "bytes": 1064864
+  },
+  {
+    "file": "clouds.jpg",
+    "page": "https://unsplash.com/photos/a-plane-is-flying-high-in-the-sky-KGEhUsY1U94",
+    "photographer": "Tsuyoshi Kozu",
+    "alt": "White billowing clouds against a clear, expansive blue sky.",
+    "original_image_url": "https://images.unsplash.com/photo-1735624886724-84bfef88d02d",
+    "download_url": "https://images.unsplash.com/photo-1735624886724-84bfef88d02d?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/clouds.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      2700
+    ],
+    "bytes": 788425
+  },
+  {
+    "file": "orange-still-life.jpg",
+    "page": "https://unsplash.com/photos/shallow-focus-photo-of-orange-fruit-06X7AIB00p8",
+    "photographer": "Vika Wendish",
+    "alt": "Orange fruit balanced on a blue sculptural clay shape against a white background.",
+    "original_image_url": "https://images.unsplash.com/photo-1577704994888-b3b1fb948507",
+    "download_url": "https://images.unsplash.com/photo-1577704994888-b3b1fb948507?auto=format&fit=crop&w=1800&q=85",
+    "local_path": "/workspace/scratch/32bde8b9c06f/portfolio-photos/orange-still-life.jpg",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "dimensions": [
+      1800,
+      2537
+    ],
+    "bytes": 221445
+  }
+]

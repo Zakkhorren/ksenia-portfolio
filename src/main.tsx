@@ -1,0 +1,13 @@
+import { render } from "@solidjs/web";
+import App from "./App";
+import "./styles/site.css";
+import "./styles/home.css";
+import "./styles/revision.css";
+import "./styles/header.css";
+import "./styles/logofolio.css";
+import "./styles/marketplace.css";
+import "./styles/app.css";
+
+const root = document.getElementById("app");
+if (!root) throw new Error("Application root is missing");
+render(() => <App />, root);

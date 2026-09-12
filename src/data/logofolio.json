@@ -1,0 +1,348 @@
+[
+  {
+    "id": "perm",
+    "name": "PERM POKER CLUB",
+    "year": 2026,
+    "context": "Покерный клуб без игры на деньги",
+    "cream": false,
+    "assets": [
+      {
+        "file": "perm.svg",
+        "source": "01.01 - Perm Poker Club - основной логотип - 2026.svg",
+        "width": 1969.41,
+        "height": 600.0,
+        "sha256": "c37e30170a2b2a8cb40440c7bce393c603a46a445192375008208e0758902ba2",
+        "artwork_bounds": [
+          48.33,
+          50,
+          1872.75,
+          500
+        ]
+      },
+      {
+        "file": "perm-secondary.svg",
+        "source": "01.02 - Perm Poker Club - иконка - 202.svg",
+        "width": 946.73,
+        "height": 600.0,
+        "sha256": "c9d7ea639a104f5847b11079c8fa9a8f3b8c0237ae878b55831b9b0b5e20426a"
+      },
+      {
+        "file": "perm-additional-01.svg",
+        "source": "01.01 - Perm poker club -(1).svg",
+        "width": 3703.45,
+        "height": 600.0,
+        "sha256": "e09b52a01e53727f473f2d2d352d6451d7b845b145c5d8f6ea6ee51e80944dc7"
+      },
+      {
+        "file": "perm-additional-03.svg",
+        "source": "01.03 - Perm poker club - покерный клуб не на деньги - 2026(3).svg",
+        "width": 1078.87,
+        "height": 600.0,
+        "sha256": "251287c597460e729f438545c2a4216f378f13d4791967e980a314af2bbec475"
+      }
+    ]
+  },
+  {
+    "id": "whisper",
+    "name": "ЗЕЛЁНЫЙ ШЕПОТ",
+    "year": 2026,
+    "context": "Инди-видеоигра",
+    "cream": false,
+    "assets": [
+      {
+        "file": "whisper.svg",
+        "source": "02 - Зеленый шепот - логотип для инди видеоигры - 2026.svg",
+        "width": 1100.0,
+        "height": 600.0,
+        "sha256": "f923f3977d406fdd09571fe4b85c014778b9a7ccc1a19459c69351691c79bb0f",
+        "artwork_bounds": [
+          50.01,
+          49.98,
+          999.97,
+          500.02
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tea",
+    "name": "ЮЙ ЧА",
+    "year": 2026,
+    "context": "Чайная",
+    "cream": false,
+    "assets": [
+      {
+        "file": "tea-cover.svg",
+        "source": "1. юй ча - на обложку-01(1).svg",
+        "width": 1366.63,
+        "height": 600.0,
+        "sha256": "d9b226d7bff0c15a9ca3ba2361c6ba4b2479a35b8e40dc71981f2b0d3293d838",
+        "artwork_bounds": [
+          48.08,
+          49.99,
+          1270.53,
+          500.01
+        ]
+      },
+      {
+        "file": "tea-variant-01.svg",
+        "source": "1. юй ча - внутрь 01(2).svg",
+        "width": 1365.46,
+        "height": 600.0,
+        "sha256": "68e5900a09b4453eec7f4232205f2315e60e6cabef98135879a557b2d66b54b5"
+      },
+      {
+        "file": "tea-variant-02.svg",
+        "source": "1. юй ча - внутрь 02(1).svg",
+        "width": 882.84,
+        "height": 600.0,
+        "sha256": "b34f21120d48ec08c8a76d118eebd75c77dc2078203ae9219005a0839f05c817"
+      }
+    ],
+    "hero": "tea-variant-01.svg",
+    "secondary": [
+      "tea-variant-02.svg"
+    ]
+  },
+  {
+    "id": "peptide",
+    "name": "PEPTIDE",
+    "year": 2025,
+    "context": "Разработка продуктов на основе пептидов",
+    "cream": false,
+    "assets": [
+      {
+        "file": "peptide.svg",
+        "source": "04.01 - Peptide - основной логотип - 2025.svg",
+        "width": 2410.27,
+        "height": 600.0,
+        "sha256": "9480c1f094a53060b97488a09d722a9f73af9f02c0f9d302b9c8c72320846a3f",
+        "artwork_bounds": [
+          50,
+          50.01,
+          2310.27,
+          500
+        ]
+      },
+      {
+        "file": "peptide-secondary.svg",
+        "source": "04.02 - Peptide - дополнительный знак - 2025.svg",
+        "width": 751.68,
+        "height": 600.0,
+        "sha256": "45ce87a8bebc00dc78b82a5476b672c99a90afc7c234e89dc1913041d0c8e865"
+      }
+    ]
+  },
+  {
+    "id": "evia",
+    "name": "EVIA",
+    "year": 2025,
+    "context": "Экспериментальный шрифтовой логотип",
+    "cream": true,
+    "assets": [
+      {
+        "file": "evia.svg",
+        "source": "05 - EVIA - 2025.svg",
+        "width": 1868.5,
+        "height": 600.0,
+        "sha256": "86ece60bc079b843cdc27560a303ba40a6b9201989618f1528b03945283c6039",
+        "artwork_bounds": [
+          50.98,
+          50,
+          1766.54,
+          500.01
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arbo",
+    "name": "ARBO",
+    "year": 2025,
+    "context": "Экспериментальный шрифтовой логотип",
+    "cream": true,
+    "assets": [
+      {
+        "file": "arbo.svg",
+        "source": "06 - ARBO - 2025.svg",
+        "width": 1761.11,
+        "height": 600.0,
+        "sha256": "48165baebc51d74afc25176be70dec9d419b0e6005550aa898f46f1f9f9fa69e",
+        "artwork_bounds": [
+          50,
+          50,
+          1661.11,
+          500.01
+        ]
+      }
+    ]
+  },
+  {
+    "id": "star",
+    "name": "ЗВЕЗДА",
+    "year": 2024,
+    "context": "Эко-косметика · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "star.svg",
+        "source": "07 - Звезда - эко-косметика - студенческая работа - 2024.svg",
+        "width": 1189.76,
+        "height": 600.0,
+        "sha256": "f34a4558d502c74ddda376991cddc9137618c9dc84ad227a4ed0e09b42901c0d",
+        "artwork_bounds": [
+          52.94,
+          50.01,
+          1083.88,
+          499.98
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product",
+    "name": "ПРОДУКТСЕРВИС",
+    "year": 2024,
+    "context": "Дистрибуция продуктов питания · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "product.svg",
+        "source": "08.01 - Продуктсервис - дистрибуция продуктов питания - основной логотип - 2024.svg",
+        "width": 2574.14,
+        "height": 600.0,
+        "sha256": "b09cf62b9bc692d33cbff6e3ef9066aab046adfe2746e78b38df61a1024f194c",
+        "artwork_bounds": [
+          50.68,
+          50,
+          2472.79,
+          500
+        ]
+      },
+      {
+        "file": "product-secondary.svg",
+        "source": "08.02 - Продуктсервис - дистрибуция продуктов питания - знак - 2024-01.svg",
+        "width": 490.0,
+        "height": 600.0,
+        "sha256": "dc13e9499138e2bf4f653e8725e8932dc819c8c9cadb5b98b6d9e56da2856553"
+      }
+    ]
+  },
+  {
+    "id": "matreshka",
+    "name": "RUS MATRESHKA",
+    "year": 2024,
+    "context": "Фабрика матрёшек · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "matreshka.svg",
+        "source": "09 - RUS Matreshka - фабрика матрешек - студенческая работа - 2024.svg",
+        "width": 1937.59,
+        "height": 600.0,
+        "sha256": "4db58f1a1eaddc2b53a8a8345d35ef150cd4ad9033868dbb9979d78d95f32c7b",
+        "artwork_bounds": [
+          49.99,
+          49.99,
+          1837.61,
+          500.01
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nest",
+    "name": "ЛАПОЧКИНО ГНЕЗДО",
+    "year": 2024,
+    "context": "Эко-база отдыха · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "nest.svg",
+        "source": "10.01 - Лапочкино гнездо - студенческая работа - 2024.svg",
+        "width": 2590.19,
+        "height": 600.0,
+        "sha256": "ab6e7c18105cb4e46697f63f7a8889851f813bc076f5fd872c83d62bdf41da80",
+        "artwork_bounds": [
+          50,
+          50,
+          2490.19,
+          500
+        ]
+      },
+      {
+        "file": "nest-secondary.svg",
+        "source": "10.02 - Лапочкино гнездо - дополнительный вариант - 2024-01.svg",
+        "width": 430.67,
+        "height": 600.0,
+        "sha256": "9f8f47c69c067e658df5776b1adc19cd6ceaf03d078d4f2665fcbf29fe4060a1"
+      }
+    ]
+  },
+  {
+    "id": "shark",
+    "name": "АКУЛА",
+    "year": 2023,
+    "context": "Креативное агентство · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "shark.svg",
+        "source": "11 - Акула - креативное агентство - студенческая работа - 2023.svg",
+        "width": 701.36,
+        "height": 600.0,
+        "sha256": "c996380b793a28d0076d45aac147bee6cbaf817bb29754ebd5d64c9aafc4f2e9",
+        "artwork_bounds": [
+          50,
+          49.99,
+          601.36,
+          500.01
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cream",
+    "name": "HAND CREAM",
+    "year": 2023,
+    "context": "Шрифтовой логотип для упаковки · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "cream.svg",
+        "source": "12 - HAND CREAM - студенческая работа - 2023.svg",
+        "width": 1827.13,
+        "height": 600.0,
+        "sha256": "020f40db692b60ff170b0b2d900449b94af5816491245752e8c00a165207c04f",
+        "artwork_bounds": [
+          50,
+          50,
+          1727.12,
+          499.99
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shine",
+    "name": "СИЯЙ!",
+    "year": 2023,
+    "context": "Подростковая косметика · учебный проект",
+    "cream": false,
+    "assets": [
+      {
+        "file": "shine.svg",
+        "source": "13 - Сияй! - подростковая косметика - студенческая работа - 2023.svg",
+        "width": 1377.09,
+        "height": 600.0,
+        "sha256": "aa2107146b8526fb743cfc0aacf00c5db08775661eb24f356cc81dea29eb0488",
+        "artwork_bounds": [
+          42.51,
+          50,
+          1292.07,
+          500
+        ]
+      }
+    ]
+  }
+]

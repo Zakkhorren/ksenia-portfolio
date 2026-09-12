@@ -1,0 +1,169 @@
+{
+  "market-magnesium": {
+    "title": "Магний цитрат + витамин B6",
+    "images": [
+      {
+        "src": "/assets/marketplace/asset-09.webp",
+        "alt": "Главная карточка",
+        "caption": "Главная карточка",
+        "thumb": "/assets/marketplace/asset-09-thumb.webp"
+      },
+      {
+        "src": "/assets/marketplace/asset-10.webp",
+        "alt": "Рекомендации по применению",
+        "caption": "Рекомендации по применению",
+        "thumb": "/assets/marketplace/asset-10-thumb.webp"
+      },
+      {
+        "src": "/assets/marketplace/asset-11.webp",
+        "alt": "Симптомы",
+        "caption": "Симптомы",
+        "thumb": "/assets/marketplace/asset-11-thumb.webp"
+      }
+    ],
+    "description": "Серия карточек для магния с витамином B6. Акцент на продукте, ключевых свойствах и понятной подаче информации.",
+    "facts": {
+      "КОЛИЧЕСТВО КАРТОЧЕК": "3",
+      "ФОРМАТ": "3:4",
+      "КАТЕГОРИЯ": "БАДЫ",
+      "ГОД": "2026"
+    },
+    "mode": "marketplace",
+    "preheading": "БАДЫ / 2026",
+    "title_lines": [
+      "МАГНИЙ ЦИТРАТ",
+      "+ ВИТАМИН B6"
+    ],
+    "brand": "HEALTH FORM"
+  },
+  "layout-1": {
+    "title": "Печатная графика",
+    "images": [
+      {
+        "src": "/assets/editorial.png",
+        "alt": "Плакат",
+        "caption": "Плакат",
+        "crop": true,
+        "position": "0% 85%",
+        "ratio": "1.2"
+      }
+    ],
+    "description": "",
+    "facts": {},
+    "mode": "simple"
+  },
+  "layout-2": {
+    "title": "Пространство и свет",
+    "images": [
+      {
+        "src": "/assets/editorial.png",
+        "alt": "Разворот",
+        "caption": "Разворот",
+        "crop": true,
+        "position": "60% 5%",
+        "ratio": "1.2"
+      }
+    ],
+    "description": "",
+    "facts": {},
+    "mode": "simple"
+  },
+  "layout-3": {
+    "title": "FORMA",
+    "images": [
+      {
+        "src": "/assets/editorial.png",
+        "alt": "Печатные материалы",
+        "caption": "Печатные материалы",
+        "crop": true,
+        "position": "70% 100%",
+        "ratio": "1.2"
+      }
+    ],
+    "description": "",
+    "facts": {},
+    "mode": "simple"
+  },
+  "layout-4": {
+    "title": "Идеи и предметы",
+    "images": [
+      {
+        "src": "/assets/editorial.png",
+        "alt": "Книжная вёрстка",
+        "caption": "Книжная вёрстка",
+        "crop": true,
+        "position": "0% 0%",
+        "ratio": "1.2"
+      }
+    ],
+    "description": "",
+    "facts": {},
+    "mode": "simple"
+  },
+  "project-expresso": {
+    "title": "EXPRESSO",
+    "images": [
+      {
+        "src": "/assets/coffee.jpg",
+        "alt": "EXPRESSO / Настроение проекта",
+        "caption": "EXPRESSO / Настроение проекта"
+      },
+      {
+        "src": "/assets/packaging.png",
+        "alt": "EXPRESSO / Визуальные материалы",
+        "caption": "EXPRESSO / Визуальные материалы"
+      },
+      {
+        "src": "/assets/branding.png",
+        "alt": "EXPRESSO / Детали",
+        "caption": "EXPRESSO / Детали"
+      }
+    ],
+    "description": "",
+    "facts": {}
+  },
+  "project-riviera": {
+    "title": "RIVIERA",
+    "images": [
+      {
+        "src": "/assets/lake-canoe.jpg",
+        "alt": "RIVIERA / Настроение проекта",
+        "caption": "RIVIERA / Настроение проекта"
+      },
+      {
+        "src": "/assets/clouds.jpg",
+        "alt": "RIVIERA / Визуальные материалы",
+        "caption": "RIVIERA / Визуальные материалы"
+      },
+      {
+        "src": "/assets/branding.png",
+        "alt": "RIVIERA / Детали",
+        "caption": "RIVIERA / Детали"
+      }
+    ],
+    "description": "",
+    "facts": {}
+  },
+  "project-fashion-lab": {
+    "title": "FASHION LAB",
+    "images": [
+      {
+        "src": "/assets/fashion-rack.jpg",
+        "alt": "FASHION LAB / Настроение проекта",
+        "caption": "FASHION LAB / Настроение проекта"
+      },
+      {
+        "src": "/assets/branding.png",
+        "alt": "FASHION LAB / Визуальные материалы",
+        "caption": "FASHION LAB / Визуальные материалы"
+      },
+      {
+        "src": "/assets/editorial.png",
+        "alt": "FASHION LAB / Детали",
+        "caption": "FASHION LAB / Детали"
+      }
+    ],
+    "description": "",
+    "facts": {}
+  }
+}

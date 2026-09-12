@@ -1,0 +1,128 @@
+{
+  "name": "Ксюша",
+  "contacts": {
+    "email": "",
+    "telegram": "https://t.me/zakkhorren",
+    "behance": "https://www.behance.net/zakkhorren"
+  },
+  "projects": [
+    {
+      "slug": "expresso",
+      "title": "EXPRESSO",
+      "number": "01",
+      "type": "Айдентика кофейни",
+      "label": "BRAND IDENTITY / COFFEE",
+      "image": "coffee.jpg",
+      "class": "coffee",
+      "alt": "Чашка эспрессо на кофейных зёрнах",
+      "description": "Айдентика кофейни: логотип, упаковка, печатные материалы и оформление пространства.",
+      "idea": "Тёплый кофе.\nСильный характер.",
+      "images": [
+        "coffee.jpg",
+        "packaging.png",
+        "branding.png"
+      ]
+    },
+    {
+      "slug": "riviera",
+      "title": "RIVIERA",
+      "number": "02",
+      "type": "Айдентика / плавание",
+      "label": "BRAND IDENTITY / SWIMMING",
+      "image": "lake-canoe.jpg",
+      "class": "water",
+      "alt": "Каноэ на озере среди гор",
+      "description": "Визуальный язык проекта о плавании: логотип, фирменная графика и носители айдентики.",
+      "idea": "В своём ритме.\nВ своей стихии.",
+      "images": [
+        "lake-canoe.jpg",
+        "clouds.jpg",
+        "branding.png"
+      ]
+    },
+    {
+      "slug": "fashion-lab",
+      "title": "FASHION LAB",
+      "number": "03",
+      "type": "Айдентика бренда одежды",
+      "label": "BRAND IDENTITY / FASHION",
+      "image": "fashion-rack.jpg",
+      "class": "fashion",
+      "alt": "Чёрная и белая одежда на минималистичной стойке",
+      "description": "Айдентика бренда одежды: логотип, типографика, упаковка и материалы для коммуникации.",
+      "idea": "Форма.\nСвобода выражения.",
+      "images": [
+        "fashion-rack.jpg",
+        "branding.png",
+        "editorial.png"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "logofolio",
+      "title": "LOGOFOLIO",
+      "page_title": "ЛОГОТИПЫ",
+      "number": "01",
+      "label": "IDENTITY",
+      "description": "Логотипы, знаки и небольшие визуальные системы.",
+      "tagline": "LOGOS / MARKS /\nVISUAL IDENTITIES",
+      "image": "branding.png",
+      "alt": "Фирменные карточки на тёмном камне",
+      "note": "Всё начинается с одного знака.",
+      "next": "packaging"
+    },
+    {
+      "slug": "packaging",
+      "title": "PACKAGING",
+      "page_title": "УПАКОВКА",
+      "number": "02",
+      "label": "PACKAGING",
+      "description": "Упаковка, которую хочется рассмотреть со всех сторон.",
+      "tagline": "LABELS / BOXES /\nPRODUCT STORIES",
+      "image": "packaging.png",
+      "alt": "Кремовая, чёрная и красная упаковка RITUAL",
+      "note": "У каждой вещи — своя оболочка.",
+      "next": "marketplace"
+    },
+    {
+      "slug": "marketplace",
+      "title": "MARKETPLACE",
+      "page_title": "МАРКЕТПЛЕЙСЫ",
+      "number": "03",
+      "label": "E-COMMERCE",
+      "description": "Карточки товаров, инфографика и визуальный контент для маркетплейсов.",
+      "tagline": "PRODUCT CARDS /\nINFOGRAPHICS / E-COMMERCE",
+      "image": "packaging.png",
+      "alt": "Предметная съёмка косметики и упаковки",
+      "note": "Да, их можно добавить в корзину :)",
+      "next": "layout"
+    },
+    {
+      "slug": "layout",
+      "title": "LAYOUT",
+      "page_title": "ВЁРСТКА",
+      "number": "04",
+      "label": "EDITORIAL",
+      "description": "Журналы, многостраничные издания и печатная графика. Работа с сеткой, типографикой и структурой.",
+      "tagline": "MAGAZINES / BOOKLETS /\nPRINTED STORIES",
+      "image": "editorial.png",
+      "alt": "Разворот журнала об архитектуре FORMA",
+      "note": "Между строк — тоже дизайн.",
+      "next": "experiments"
+    },
+    {
+      "slug": "experiments",
+      "title": "EXPERIMENTS",
+      "page_title": "ЭКСПЕРИМЕНТЫ",
+      "number": "05",
+      "label": "PLAYGROUND",
+      "description": "Фотография, графика и визуальные поиски. Просто потому, что интересно.",
+      "tagline": "PERSONAL / PHOTO /\nVISUAL STUDIES",
+      "image": "orange-still-life.jpg",
+      "alt": "Экспериментальный натюрморт с апельсином",
+      "note": "Немного творческой свободы.",
+      "next": null
+    }
+  ]
+}

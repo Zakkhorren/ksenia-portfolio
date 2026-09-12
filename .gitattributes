@@ -1,0 +1,9 @@
+* text=auto eol=lf
+# Preserve supplied artwork byte-for-byte, including original line endings.
+*.svg -text
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ttf binary
+*.woff2 binary

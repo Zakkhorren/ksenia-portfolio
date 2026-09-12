@@ -1,0 +1,26 @@
+/* This file is loaded only on Marketplace. */
+.marketplace-supplied{align-items:start}
+.marketplace-supplied img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:auto}
+.market-placeholder,.market-rich-placeholder{min-width:0}
+.market-rich-placeholder{grid-column:1/-1}
+.marketplace-supplied .product-open{cursor:pointer}
+.marketplace-supplied .product-name{font-size:.875rem;line-height:1.4}
+.marketplace-supplied .view-cards{margin-top:10px}
+
+/* Same two-column viewer, compact natural content and uncropped thumbnails. */
+.viewer[data-mode=marketplace] .viewer-shell{grid-template-rows:auto auto;align-items:start;height:auto;gap:14px 36px;padding-bottom:26px}
+.viewer[data-mode=marketplace] .viewer-description{grid-row:1 / span 2;align-self:start;padding-top:16px}
+.viewer[data-mode=marketplace] .viewer-description .viewer-preheading{font-size:.75rem;letter-spacing:.04em;color:var(--muted);margin-bottom:16px}
+.viewer[data-mode=marketplace] .viewer-description h3{font-size:clamp(1.25rem,2.2vw,1.95rem);letter-spacing:0;line-height:1.25;margin-bottom:14px}
+.viewer[data-mode=marketplace] .viewer-description h3 span{display:block;white-space:nowrap}
+.viewer[data-mode=marketplace] .viewer-description .viewer-brand{margin-bottom:20px}
+.viewer[data-mode=marketplace] .viewer-description dl{margin-top:24px;gap:8px 16px}
+.viewer[data-mode=marketplace] .viewer-description dt{margin:0}
+.viewer[data-mode=marketplace] .viewer-caption{display:none}
+.viewer[data-mode=marketplace] .viewer-stage{height:min(57dvh,560px)}
+.viewer[data-mode=marketplace] .viewer-thumbs{padding:3px;gap:10px;overflow-x:auto;max-width:100%}
+.viewer[data-mode=marketplace] .viewer-thumbs button{width:68px;height:auto;aspect-ratio:3/4;padding:2px;opacity:1;background:transparent}
+.viewer[data-mode=marketplace] .viewer-thumbs img{object-fit:contain;height:100%;width:100%}
+@media(max-width:760px){.viewer[data-mode=marketplace] .viewer-shell{gap:12px;padding:40px 20px 20px}.viewer[data-mode=marketplace] .viewer-description{padding-top:10px}.viewer[data-mode=marketplace] .viewer-description h3{font-size:clamp(1rem,5vw,1.6rem)}.viewer[data-mode=marketplace] .viewer-stage{height:48dvh;min-height:180px}.viewer[data-mode=marketplace] .viewer-thumbs button{width:60px}}
+
+.viewer[data-mode=marketplace]{inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;height:auto}
