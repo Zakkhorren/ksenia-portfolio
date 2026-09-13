@@ -14,7 +14,7 @@ export function useSectionNavigation(path: Accessor<string>) {
       setActive("work");
       return;
     }
-    const sections = ["work", "about", "contact"] as const;
+    const sections = ["work", "about"] as const;
     const elements = sections.map((id) => document.getElementById(id)!);
     const update = () => {
       // Use a viewport-relative reading band, not fixed document scroll offsets.
@@ -23,7 +23,7 @@ export function useSectionNavigation(path: Accessor<string>) {
         Math.ceil(scrollY + innerHeight) >=
         document.documentElement.scrollHeight - 1;
       const currentSection = atBottom
-        ? "contact"
+        ? "about"
         : ([...elements]
             .reverse()
             .find((el) => el.getBoundingClientRect().top <= line)

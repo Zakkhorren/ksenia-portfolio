@@ -15,7 +15,9 @@ test("seven mapped covers, four inert placeholders", async ({ page }) => {
         images.map((image) => image.getAttribute("src")),
       ),
   ).toEqual(
-    assets.covers.map((image) => `/ksenia-portfolio/assets/${image.file}`),
+    assets.covers
+      .slice(0, 3)
+      .map((image) => `/ksenia-portfolio/assets/${image.file}`),
   );
   expect(
     await cards
@@ -139,8 +141,8 @@ test("homepage wording and section navigation follow click, scroll and history",
       .map((text) => text.trim())
       .join(" "),
   ).toBe("HOW I WORK");
-  const about = page.locator('.site-nav a[href$="#about"]'),
-    contacts = page.locator('.site-nav a[href$="#contact"]');
+  const about = page.locator('.site-nav a[href$="#about"]');
+  await expect(page.locator(".site-nav a")).toHaveCount(2);
   await about.click();
   await expect(about).toHaveClass("active");
   await expect
@@ -148,14 +150,18 @@ test("homepage wording and section navigation follow click, scroll and history",
       page.locator("#about").evaluate((el) => el.getBoundingClientRect().top),
     )
     .toBeLessThan(140);
-  await contacts.click();
-  await expect(contacts).toHaveClass("active");
+  await page.evaluate(() =>
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "instant",
+    }),
+  );
   await page.waitForFunction(
     () =>
       Math.ceil(scrollY + innerHeight) >=
       document.documentElement.scrollHeight - 2,
   );
-  await expect(contacts).toHaveClass("active");
+  await expect(about).toHaveClass("active");
   await page.evaluate(() =>
     document.getElementById("about")!.scrollIntoView({ behavior: "instant" }),
   );
@@ -165,9 +171,9 @@ test("homepage wording and section navigation follow click, scroll and history",
     "active",
   );
   await page.goto("work/logofolio/");
-  await page.locator('.site-nav a[href$="#contact"]').click();
-  await expect(page).toHaveURL(/#contact$/);
-  await expect(page.locator('.site-nav a[href$="#contact"]')).toHaveClass(
+  await page.locator('.site-nav a[href$="#about"]').click();
+  await expect(page).toHaveURL(/#about$/);
+  await expect(page.locator('.site-nav a[href$="#about"]')).toHaveClass(
     "active",
   );
 });

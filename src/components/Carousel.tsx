@@ -1,7 +1,7 @@
 import { createSignal, For } from "solid-js";
 import data from "../data/content.json";
 import { Image } from "./Shared";
-import { url } from "../lib/paths";
+import { asset, url } from "../lib/paths";
 import { pad, ru } from "../lib/typography";
 import assets from "../data/case-assets.json";
 const projects = ["fashion-lab", "riviera", "expresso"].map((slug) => ({
@@ -142,11 +142,12 @@ export default function Carousel() {
                   </div>
                 </a>
               ) : (
-                <div class="featured-card project-placeholder supplied-cover">
-                  <Image
-                    name={assets.covers[index()].file}
-                    alt={`Обложка будущего проекта ${index() + 1}`}
-                  />
+                <div
+                  class={`featured-card project-placeholder supplied-cover${index() === 4 || index() === 6 ? " placeholder-light" : ""}`}
+                  style={{
+                    "background-image": `url("${asset(assets.covers[[3, 4, 6, 5][index() - 3]].file)}")`,
+                  }}
+                >
                   <div class="featured-content">
                     <p class="project-number">
                       {pad(index() + 1)}

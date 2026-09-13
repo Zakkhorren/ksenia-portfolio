@@ -10,7 +10,7 @@
       "slug": "expresso",
       "title": "EXPRESSO",
       "number": "01",
-      "type": "Айдентика кофейни",
+      "type": "Айдентика / Кофейня",
       "label": "BRAND IDENTITY / COFFEE",
       "image": "coffee.jpg",
       "class": "coffee",
@@ -27,7 +27,7 @@
       "slug": "riviera",
       "title": "RIVIERA",
       "number": "02",
-      "type": "Айдентика / плавание",
+      "type": "Айдентика / Круизы и путешествия",
       "label": "BRAND IDENTITY / SWIMMING",
       "image": "lake-canoe.jpg",
       "class": "water",
@@ -44,7 +44,7 @@
       "slug": "fashion-lab",
       "title": "FASHION LAB",
       "number": "03",
-      "type": "Айдентика бренда одежды",
+      "type": "Айдентика / Бренд одежды",
       "label": "BRAND IDENTITY / FASHION",
       "image": "fashion-rack.jpg",
       "class": "fashion",
@@ -65,11 +65,11 @@
       "page_title": "ЛОГОТИПЫ",
       "number": "01",
       "label": "IDENTITY",
-      "description": "Логотипы, знаки и небольшие визуальные системы.",
+      "description": "Логотипы и знаки, собранные в одну систему.",
       "tagline": "LOGOS / MARKS /\nVISUAL IDENTITIES",
       "image": "branding.png",
       "alt": "Фирменные карточки на тёмном камне",
-      "note": "Всё начинается с одного знака.",
+      "note": "Смысл — в простоте",
       "next": "packaging"
     },
     {
@@ -78,11 +78,11 @@
       "page_title": "УПАКОВКА",
       "number": "02",
       "label": "PACKAGING",
-      "description": "Упаковка, которую хочется рассмотреть со всех сторон.",
+      "description": "Упаковка, которую хочется рассматривать.",
       "tagline": "LABELS / BOXES /\nPRODUCT STORIES",
       "image": "packaging.png",
       "alt": "Кремовая, чёрная и красная упаковка RITUAL",
-      "note": "У каждой вещи — своя оболочка.",
+      "note": "Каждой вещи — своя оболочка",
       "next": "marketplace"
     },
     {
@@ -95,7 +95,7 @@
       "tagline": "PRODUCT CARDS /\nINFOGRAPHICS / E-COMMERCE",
       "image": "packaging.png",
       "alt": "Предметная съёмка косметики и упаковки",
-      "note": "Да, их можно добавить в корзину :)",
+      "note": "Иногда всё начинается с обложки",
       "next": "layout"
     },
     {
@@ -104,11 +104,11 @@
       "page_title": "ВЁРСТКА",
       "number": "04",
       "label": "EDITORIAL",
-      "description": "Журналы, многостраничные издания и печатная графика. Работа с сеткой, типографикой и структурой.",
+      "description": "Журналы, многостраничные издания и печатная графика.",
       "tagline": "MAGAZINES / BOOKLETS /\nPRINTED STORIES",
       "image": "editorial.png",
       "alt": "Разворот журнала об архитектуре FORMA",
-      "note": "Между строк — тоже дизайн.",
+      "note": "Всё держится на сетке",
       "next": "experiments"
     },
     {
@@ -117,11 +117,11 @@
       "page_title": "ЭКСПЕРИМЕНТЫ",
       "number": "05",
       "label": "PLAYGROUND",
-      "description": "Фотография, графика и визуальные поиски. Просто потому, что интересно.",
+      "description": "Место для идей, проб и визуальных экспериментов.",
       "tagline": "PERSONAL / PHOTO /\nVISUAL STUDIES",
       "image": "orange-still-life.jpg",
       "alt": "Экспериментальный натюрморт с апельсином",
-      "note": "Немного творческой свободы.",
+      "note": "Иногда хочется просто поиграться",
       "next": null
     }
   ]

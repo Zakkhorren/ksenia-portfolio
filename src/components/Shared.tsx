@@ -3,7 +3,7 @@ import data from "../data/content.json";
 import { asset, url } from "../lib/paths";
 import { ru } from "../lib/typography";
 
-export type NavSection = "work" | "about" | "contact";
+export type NavSection = "work" | "about";
 export function Header(props: {
   active: NavSection;
   onActivate: (section: NavSection) => void;
@@ -31,7 +31,6 @@ export function Header(props: {
               [
                 ["work", "РАБОТЫ"],
                 ["about", "ОБО МНЕ"],
-                ["contact", "КОНТАКТЫ"],
               ] as const
             }
           >
@@ -186,16 +185,12 @@ export function CollectionHeader(props: { slug: string }) {
   return (
     <>
       <PageHeader
-        completed={props.slug === "logofolio" || props.slug === "marketplace"}
+        completed
         title={category().page_title}
         number={category().number}
         label={labels[props.slug]}
         description={category().description}
-        note={
-          props.slug === "marketplace"
-            ? "Иногда всё начинается с обложки."
-            : category().note
-        }
+        note={category().note}
       />
       <nav class="collection-nav" aria-label="Разделы работ">
         <For each={data.categories}>

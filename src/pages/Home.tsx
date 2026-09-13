@@ -1,4 +1,5 @@
-import { url } from "../lib/paths";
+import backgrounds from "../data/home-backgrounds.json";
+import { asset, url } from "../lib/paths";
 import { ru } from "../lib/typography";
 import Carousel from "../components/Carousel";
 import { Contact } from "../components/Shared";
@@ -43,7 +44,13 @@ export default function Home() {
           </p>
         </div>
         <div class="category-list">
-          <a class="category-row logofolio" href={url("/work/logofolio/")}>
+          <a
+            class="category-row logofolio supplied-background"
+            style={{
+              "background-image": `url("${asset(backgrounds.logofolio.file)}")`,
+            }}
+            href={url("/work/logofolio/")}
+          >
             <div class="category-copy">
               <p class="eyebrow">{ru("01 / LOGOS")}</p>
               <h3>{ru("ЛОГОТИПЫ")}</h3>
@@ -57,17 +64,14 @@ export default function Home() {
                 </span>
               </span>
             </div>
-            <div class="category-image">
-              <img
-                src={url("/assets/branding.png")}
-                alt="Фирменные карточки на тёмном камне"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
           </a>
-          <a class="category-row packaging" href={url("/work/packaging/")}>
+          <a
+            class="category-row packaging supplied-background"
+            style={{
+              "background-image": `url("${asset(backgrounds.packaging.file)}")`,
+            }}
+            href={url("/work/packaging/")}
+          >
             <div class="category-copy">
               <p class="eyebrow">{ru("02 / OBJECTS")}</p>
               <h3>{ru("УПАКОВКА")}</h3>
@@ -81,17 +85,14 @@ export default function Home() {
                 </span>
               </span>
             </div>
-            <div class="category-image">
-              <img
-                src={url("/assets/packaging.png")}
-                alt="Кремовая, чёрная и красная упаковка RITUAL"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
           </a>
-          <a class="category-row marketplace" href={url("/work/marketplace/")}>
+          <a
+            class="category-row marketplace supplied-background"
+            style={{
+              "background-image": `url("${asset(backgrounds.marketplace.file)}")`,
+            }}
+            href={url("/work/marketplace/")}
+          >
             <div class="category-copy">
               <p class="eyebrow">{ru("03 / E-COMMERCE")}</p>
               <h3>{ru("МАРКЕТПЛЕЙСЫ")}</h3>
@@ -105,24 +106,14 @@ export default function Home() {
                 </span>
               </span>
             </div>
-            <div class="category-image">
-              <img
-                src={url("/assets/packaging.png")}
-                alt="Предметная съёмка косметики и упаковки"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-              <img
-                src={url("/assets/branding.png")}
-                alt="Печатные карточки для бренда"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
           </a>
-          <a class="category-row layout" href={url("/work/layout/")}>
+          <a
+            class="category-row layout supplied-background"
+            style={{
+              "background-image": `url("${asset(backgrounds.layout.file)}")`,
+            }}
+            href={url("/work/layout/")}
+          >
             <div class="category-copy">
               <p class="eyebrow">{ru("04 / EDITORIAL")}</p>
               <h3>{ru("ВЁРСТКА")}</h3>
@@ -136,17 +127,14 @@ export default function Home() {
                 </span>
               </span>
             </div>
-            <div class="category-image">
-              <img
-                src={url("/assets/editorial.png")}
-                alt="Разворот журнала об архитектуре FORMA"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
           </a>
-          <a class="category-row experiments" href={url("/work/experiments/")}>
+          <a
+            class="category-row experiments supplied-background"
+            style={{
+              "background-image": `url("${asset(backgrounds.experiments.file)}")`,
+            }}
+            href={url("/work/experiments/")}
+          >
             <div class="category-copy">
               <p class="eyebrow">{ru("05 / PLAYGROUND")}</p>
               <h3>{ru("ЭКСПЕРИМЕНТЫ")}</h3>
@@ -159,29 +147,6 @@ export default function Home() {
                   {ru("→")}
                 </span>
               </span>
-            </div>
-            <div class="category-image">
-              <img
-                src={url("/assets/orange-metro.jpg")}
-                alt="Архитектура станции метро"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-              <img
-                src={url("/assets/orange-still-life.jpg")}
-                alt="Натюрморт с апельсином"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
-              <img
-                src={url("/assets/clouds.jpg")}
-                alt="Белые облака"
-                class=""
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </a>
         </div>

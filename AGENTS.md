@@ -110,7 +110,7 @@ bun install --frozen-lockfile, получает базовый путь чере
 - В карусели три проекта и четыре заглушки. Заглушки маркетплейсов не открываются.
 - Solid 2 использует createEffect(compute, effect) и DOM-импорты из @solidjs/web.
   Не копировать несовместимые примеры Solid 1 без проверки типов.
-- Порядок CSS в main.tsx: site, home, revision, header, logofolio, marketplace, app, case-revision.
+- Порядок CSS в main.tsx: site, home, revision, header, logofolio, marketplace, app, case-revision, final-revision.
   Перед удалением старых правил проверять каскад и затронутые страницы.
 - Не возвращать глобальный MutationObserver для типографики и ручную перерисовку всего DOM.
 - Сохранять клавиатуру, фокус, жесты, alt-тексты и prefers-reduced-motion.
@@ -133,3 +133,18 @@ bun install --frozen-lockfile, получает базовый путь чере
   остальные лениво. Python, API и серверное выполнение по-прежнему не нужны.
 - Новые стили заголовков ограничены завершёнными Logofolio/Marketplace и кейсами.
   Packaging, Layout и Experiments в этой ревизии не переделывались.
+
+## Финальная ревизия 14 сентября
+
+- Navbar содержит только РАБОТЫ и ОБО МНЕ; нижняя часть главной сохраняет активный ОБО МНЕ.
+- Все пять CollectionHeader используют общую адаптивную систему и тексты из content.json.
+- В карусели порядок фонов заглушек: исходные 04, 05, 07, 06. На светлых карточках
+  чёрные тексты и линии; overlay присутствует только у трёх действующих кейсов.
+- Пять цельных фонов главной сопоставлены по именам «на главную_…» в home-backgrounds.json.
+  Оригиналы 10667×3750 сохранены в source-assets/home-backgrounds; веб-копии 2560×900
+  в public/assets/home-backgrounds (JPEG quality 95, 4:4:4). Дизайн и пропорции сохранены.
+  Все пять блоков используют background-size: cover; на мобильном текст расположен
+  над областью фона. Внутренние сетки Packaging/Layout/Experiments не изменены.
+- Последняя строка Logofolio использует subgrid для уровней названия, описания и ссылки.
+  Исходные логотипы и ширина AKULA сохранены.
+- Дополнительные проверки: tests/final-revision.spec.ts.

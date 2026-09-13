@@ -1,0 +1,37 @@
+{
+  "logofolio": {
+    "file": "home-backgrounds/на главную_Логофолио.jpg",
+    "width": 2560,
+    "height": 900,
+    "sha256": "6c14e937e3654f39d48dc6f5fc87edafe940c40d356633c58bd29fff9aef9e86",
+    "sourceSha256": "6a6f54f94d0d66d70362de9177c546093642991a315120e16c4f1bdf117aca07"
+  },
+  "packaging": {
+    "file": "home-backgrounds/на главную_Упаковка.jpg",
+    "width": 2560,
+    "height": 900,
+    "sha256": "b3199ddbb764c2809d945f16770471586f0d62a275b66f5ed1352a9eacf48a0c",
+    "sourceSha256": "bb99f190722e663d5ee41c308e60d3ff5e6810fdbb035918376f120b41ec9f07"
+  },
+  "marketplace": {
+    "file": "home-backgrounds/на главную_Маркетплейсы.jpg",
+    "width": 2560,
+    "height": 900,
+    "sha256": "34e4c48edd3bfa9dcf9ec49ef6c92c8f901075a434a3f30282ff07bfcbf32950",
+    "sourceSha256": "b47cee62badd8cebd24d86a45d61de67807da874d80ccb592224bef780ba576d"
+  },
+  "layout": {
+    "file": "home-backgrounds/на главную_Вёрстка.jpg",
+    "width": 2560,
+    "height": 900,
+    "sha256": "2bf4cf3572795ab9385300a27b85f98fdf7d2e8fd7ba52e6c9498bae55b823ac",
+    "sourceSha256": "f15506a5ec0c632d91911e388d443e444fdd48ba13fda3482cd8ba8701d911c3"
+  },
+  "experiments": {
+    "file": "home-backgrounds/на главную_Эксперименты.jpg",
+    "width": 2560,
+    "height": 900,
+    "sha256": "2ac3b71364338c9950e2434521c5e0863b90850e0b85ffb54ddcaa7716c52d8e",
+    "sourceSha256": "86bbf7bb94a812a650a37b43aa0723c136e778c41d4d3f96d4921fac90ebaf62"
+  }
+}

@@ -1,0 +1,104 @@
+/* Shared collection headings; collection bodies retain their existing layouts. */
+.home-page .category-row.supplied-background {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 280px;
+  aspect-ratio: 2560 / 900;
+}
+@media (max-width: 600px) {
+  .home-page .category-row.supplied-background {
+    aspect-ratio: auto;
+    min-height: 440px;
+    padding-top: 220px;
+    background-origin: content-box;
+    background-clip: content-box;
+  }
+}
+.completed-page-header .page-title-line {
+  align-items: flex-start;
+}
+.completed-page-header .page-description {
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+.completed-page-header .page-title[data-title="ЭКСПЕРИМЕНТЫ"] {
+  font-size: clamp(1.5rem, 6.1cqi, 5.5rem);
+}
+/* A soft upper overlay belongs only to the three real case cards. */
+.home-page a.featured-card.supplied-cover::after {
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 70%),
+    rgb(0 0 0 / 35%) 38%,
+    transparent 78%
+  );
+}
+.home-page a.featured-card .featured-content h2 {
+  font-size: clamp(1.75rem, 2.5vw, 3rem);
+}
+.home-page a.featured-card .project-description {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  max-width: 28rem;
+  line-height: 1.4;
+}
+.home-page .project-placeholder::after {
+  content: none;
+}
+.home-page .featured-card.project-placeholder {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--fg);
+}
+.home-page .featured-card.placeholder-light {
+  color: #000;
+}
+.home-page .project-placeholder .project-number,
+.home-page .project-placeholder h2,
+.home-page .project-placeholder .project-description {
+  color: inherit;
+}
+.home-page .project-placeholder .project-number span {
+  background: currentColor;
+}
+/* Subgrid aligns the three text rows without changing artwork width or columns. */
+@media (min-width: 601px) {
+  .year-2023 {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 6;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 0;
+  }
+  .year-2023 .logo-project {
+    grid-row: 1 / 5;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+  .year-2023 .logo-caption {
+    display: contents;
+  }
+  .year-2023 .logo-caption-title {
+    grid-row: 2;
+    margin-top: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+  .year-2023 .logo-caption-context {
+    grid-row: 3;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+  .year-2023 .logo-cue {
+    grid-column: 1;
+    grid-row: 4;
+    margin: 10px 0 0;
+  }
+}
