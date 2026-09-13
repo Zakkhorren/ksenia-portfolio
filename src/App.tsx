@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import data from "./data/content.json";
 import { routePath } from "./lib/paths";
 import { closeViewer } from "./lib/viewer-state";
+import { useSectionNavigation } from "./lib/navigation";
 
 const routes = new Set([
   "/",
@@ -25,11 +26,13 @@ export default function App() {
     hash: window.location.hash,
   });
   const path = () => location().path;
+  const navigation = useSectionNavigation(path);
   const project = () =>
     data.projects.find((p) => path() === `/projects/${p.slug}/`);
   const scrollPositions = new Map<string, number>();
   let restoring: number | undefined;
   let first = true;
+  let previousPath = path();
   const key = () => path() + location().hash;
   const update = () =>
     setLocation({
@@ -76,6 +79,8 @@ export default function App() {
           selected?.description ||
           "Портфолио Ксении. Айдентика, упаковка, печатная графика и визуальные системы.";
       const wasFirst = first;
+      const samePage = previousPath === current.path;
+      previousPath = current.path;
       first = false;
       const saved = restoring;
       restoring = undefined;
@@ -87,7 +92,14 @@ export default function App() {
         if (current.hash) {
           document
             .getElementById(decodeURIComponent(current.hash.slice(1)))
-            ?.scrollIntoView({ behavior: "instant" });
+            ?.scrollIntoView({
+              behavior:
+                !wasFirst &&
+                samePage &&
+                !matchMedia("(prefers-reduced-motion: reduce)").matches
+                  ? "smooth"
+                  : "instant",
+            });
         } else if (!wasFirst) window.scrollTo(0, 0);
         if (!wasFirst && !current.hash)
           document.getElementById("main")?.focus({ preventScroll: true });
@@ -129,7 +141,7 @@ export default function App() {
         update();
       }}
     >
-      <Header />
+      <Header active={navigation.active()} onActivate={navigation.activate} />
       <main class="wrap" id="main" tabindex="-1">
         <Switch fallback={<NotFound />}>
           <Match when={path() === "/"}>

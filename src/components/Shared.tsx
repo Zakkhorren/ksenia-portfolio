@@ -3,7 +3,11 @@ import data from "../data/content.json";
 import { asset, url } from "../lib/paths";
 import { ru } from "../lib/typography";
 
-export function Header() {
+export type NavSection = "work" | "about" | "contact";
+export function Header(props: {
+  active: NavSection;
+  onActivate: (section: NavSection) => void;
+}) {
   return (
     <>
       <a class="skip-link" href="#main">
@@ -22,10 +26,34 @@ export function Header() {
           <span class="brand-description">ГРАФИЧЕСКИЙ ДИЗАЙНЕР</span>
         </a>
         <nav class="site-nav" aria-label="Главная навигация">
-          <a href={url("/#work")} class="active">
-            РАБОТЫ
-          </a>
-          <a href={url("/#about")}>ОБО МНЕ</a>
+          <For
+            each={
+              [
+                ["work", "РАБОТЫ"],
+                ["about", "ОБО МНЕ"],
+                ["contact", "КОНТАКТЫ"],
+              ] as const
+            }
+          >
+            {([section, label]) => (
+              <a
+                href={url(`/#${section}`)}
+                class={props.active === section ? "active" : ""}
+                aria-current={props.active === section ? "location" : undefined}
+                onClick={(event) => {
+                  if (
+                    !event.ctrlKey &&
+                    !event.metaKey &&
+                    !event.shiftKey &&
+                    !event.altKey
+                  )
+                    props.onActivate(section);
+                }}
+              >
+                {label}
+              </a>
+            )}
+          </For>
         </nav>
       </header>
     </>
@@ -117,9 +145,12 @@ export function PageHeader(props: {
   description: string;
   note?: string;
   project?: boolean;
+  completed?: boolean;
 }) {
   return (
-    <header class="page-header">
+    <header
+      class={`page-header${props.project ? " case-page-header" : ""}${props.completed ? " completed-page-header" : ""}`}
+    >
       <div class="breadcrumb">
         <a href={url("/")}>ГЛАВНАЯ</a>
         <span>/</span>
@@ -138,7 +169,13 @@ export function PageHeader(props: {
           </h1>
           <p class="page-description">{ru(props.description)}</p>
         </div>
-        <p class="handnote page-note">{ru(props.note || "")}</p>
+        <p class="handnote page-note">
+          {ru(
+            props.completed
+              ? (props.note || "").replace(/\.$/, "")
+              : props.note || "",
+          )}
+        </p>
       </div>
     </header>
   );
@@ -149,6 +186,7 @@ export function CollectionHeader(props: { slug: string }) {
   return (
     <>
       <PageHeader
+        completed={props.slug === "logofolio" || props.slug === "marketplace"}
         title={category().page_title}
         number={category().number}
         label={labels[props.slug]}

@@ -7,6 +7,7 @@ import "./styles/header.css";
 import "./styles/logofolio.css";
 import "./styles/marketplace.css";
 import "./styles/app.css";
+import "./styles/case-revision.css";
 
 const root = document.getElementById("app");
 if (!root) throw new Error("Application root is missing");

@@ -1,0 +1,242 @@
+{
+  "covers": [
+    {
+      "file": "cases/covers/01-fashion-lab-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "721f92433c47038066f600ddcd09b509bbee3158baf65d3a1c43a643f505245b",
+      "sha256": "72817e3d455c92a2b5493f73c3ef9140bd223f603090e3d13a6cdc42f2716e57",
+      "bytes": 595303,
+      "sourceBytes": 11208395,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/02-riviera-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "1730f3b298dcb135913965c274e6508edce8d7a4ebea9e4b44f829fc9ff4d365",
+      "sha256": "7a29d3c5ef9b7ac744965edbe0ca3820fed1041a742330b224545ea322d08e1f",
+      "bytes": 610331,
+      "sourceBytes": 11539859,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/03-expresso-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "4418581449507ce3a25d7a474c695471851181848e80be93b90c7ef943b165e2",
+      "sha256": "bd64d6da5f053ecc15c246fd03e69b9ee0fe7e903a1630241ad6cbd302758fd3",
+      "bytes": 585825,
+      "sourceBytes": 10045187,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/04-placeholder-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "28675ba1f20b43f2f56adec2518a3ea841c0f7d9309e1307f2cb7d2d6bc80cc4",
+      "sha256": "d410823eea5b83ed78cb1ea1df4afe03117ea81fd8674cf40e1327eed6052007",
+      "bytes": 402588,
+      "sourceBytes": 9359993,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/05-placeholder-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "75a507f8a2be91d6ba4e0448b4be1f8f1ac4036cc3f0fa81cd65a2473eea01b3",
+      "sha256": "7271556f90ccede0e175004d1f27a60e5e06a66e5eb1cc7a58b9a84109322248",
+      "bytes": 399165,
+      "sourceBytes": 10429529,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/06-placeholder-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "edf837d2438b96729339946c957ba745918f0e140e1f4f799d6e3f2209d314bd",
+      "sha256": "1371c607da669189140a47a675cfd876a843c0536d76e4e30340c362bf0db896",
+      "bytes": 498046,
+      "sourceBytes": 11400245,
+      "pages": 1
+    },
+    {
+      "file": "cases/covers/07-placeholder-cover.jpg",
+      "width": 2560,
+      "height": 1440,
+      "sourceSha256": "bbe3f68354726260e3f22d6e21a72686ebe88ba8fd85c81db37498a9e830ac90",
+      "sha256": "aeb41c49e29e5019a2bd3987044737262c0ced27c09facd364f7d72cf599bb49",
+      "bytes": 370311,
+      "sourceBytes": 9373981,
+      "pages": 1
+    }
+  ],
+  "projects": {
+    "fashion-lab": [
+      {
+        "file": "cases/FASHION_LAB/fashion-lab-case.jpg",
+        "width": 3200,
+        "height": 14764,
+        "sourceSha256": "deac347bf2955c6054b2473eaa8e2f0caf4e8cfc605f1289758132efd8734644",
+        "sha256": "a77549536d18f30dafdb53b1b3af42b2bbc0d546603b7de73dc3914c18647a9a",
+        "bytes": 7503514,
+        "sourceBytes": 29920620,
+        "pages": 1
+      }
+    ],
+    "riviera": [
+      {
+        "file": "cases/RIVIERA/riviera-case.jpg",
+        "width": 1920,
+        "height": 8301,
+        "sourceSha256": "8d5952c1e5c7baa2a804b9a6063a3b8a4fcb7d4ba66228dbe0d114854ac2fd32",
+        "sha256": "1b35b307a882f337396b9e7551051935aa7d354ff206589098f4fd31c65b6620",
+        "bytes": 2166754,
+        "sourceBytes": 5696800,
+        "pages": 1
+      }
+    ],
+    "expresso": [
+      {
+        "file": "cases/EXPRESSO/case/01-expresso.jpg",
+        "width": 3200,
+        "height": 1070,
+        "sourceSha256": "2b558af7695ad20c8eb16a3d424e73d9b472f11e98528741d06917dc8963ff3e",
+        "sha256": "2477565c2f90a96ffe6ac07a3b6d27beb087802b28d484a8b47240323fbc09d3",
+        "bytes": 481361,
+        "sourceBytes": 5138524,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/02-expresso.jpg",
+        "width": 3200,
+        "height": 730,
+        "sourceSha256": "5e87ce3947e189abb974b9740125f0086ab6e46fb7d822fcbdbbd1eaadceb509",
+        "sha256": "9ce80ecb3725fe726fa4aedb3a52db87c36c1e4770ebeba504fe6e0699514170",
+        "bytes": 216899,
+        "sourceBytes": 1400546,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/03-expresso.gif",
+        "width": 1920,
+        "height": 240,
+        "sourceSha256": "c39e2767020a531fa833a91106cf0704b4e365c4dae80d9c149c3ed05474b755",
+        "sha256": "c39e2767020a531fa833a91106cf0704b4e365c4dae80d9c149c3ed05474b755",
+        "bytes": 1445168,
+        "sourceBytes": 1445168,
+        "pages": 80
+      },
+      {
+        "file": "cases/EXPRESSO/case/04-expresso.jpg",
+        "width": 3200,
+        "height": 900,
+        "sourceSha256": "1ad6e376660dd56c159827689e5a7169656ce2871935a4b57f98a0d919ee58b1",
+        "sha256": "ab1994588dee83e4d3487d81b0e32e15b6487fa5686f26768e2267e319831b33",
+        "bytes": 161299,
+        "sourceBytes": 1004309,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/05-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "8e09abcecedaa1bd7eb8c5219179145f984051050500d82fa9139665188b8dd6",
+        "sha256": "e2664e4eca2b4c5d399b7d2073efdd3c63ad995784713b7781a73600e1313465",
+        "bytes": 692833,
+        "sourceBytes": 4553706,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/06-expresso.gif",
+        "width": 1920,
+        "height": 240,
+        "sourceSha256": "31b6462705905f310bd6edd82198124d145f5cfaf1c81fd4c8345d1f2248086c",
+        "sha256": "31b6462705905f310bd6edd82198124d145f5cfaf1c81fd4c8345d1f2248086c",
+        "bytes": 1280213,
+        "sourceBytes": 1280213,
+        "pages": 70
+      },
+      {
+        "file": "cases/EXPRESSO/case/07-expresso.jpg",
+        "width": 3200,
+        "height": 942,
+        "sourceSha256": "17cf35bf9df5b8e23f848b7857a80723be5ff75cbddbb6112cf0ce47bb91c4b4",
+        "sha256": "93f0f3fb8c20e3f2d357acc8485b3a16a8539ca956ade0fcdfb40207ef31d7aa",
+        "bytes": 232222,
+        "sourceBytes": 1422801,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/08-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "e4f2a867e1279473a335bbd2a63118772a897cd2c1e5e31b1ae54c974509936c",
+        "sha256": "2ed8b2e3f3eee93559c2bbf22ebe8e1a04bd0ae1eec5b0ff176e7e691d032b28",
+        "bytes": 562210,
+        "sourceBytes": 7534038,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/09-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "7cd5a7f0b464f9a32baaf26d3b86594a5f30683b170721f2e80424a990b65bb7",
+        "sha256": "a7c2464fd4a20549168eb90928b068c9700fc83102e4ba3acfc86f9ee7f39b2b",
+        "bytes": 1074596,
+        "sourceBytes": 10666669,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/10-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "e7c30118384a381339eeec129aaaa43a96289381aff63a4a9fb3b55a474ea7dd",
+        "sha256": "db4123cdcea04e7ad898f6f02dc038de7f57b06dbef04d02022ca0650e20bee4",
+        "bytes": 1593441,
+        "sourceBytes": 17265052,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/11-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "619611caf536d8aea9d12f9e64eb63126823c28fd8705f0747f44eb9398c46ab",
+        "sha256": "f1cd6a2e603bec06134a55c42e5e601507eacc3efcf675fe8692117ecbf57560",
+        "bytes": 1184849,
+        "sourceBytes": 15463528,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/12-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "0d3b2bf8a0ce65dfe1a3e9aeab311be3aad7e1f2396efc516ac800432d5449d7",
+        "sha256": "c94d3f07192faf927ee0b4ebfeaee80c5b79682524eb7fea24290583d0ed7505",
+        "bytes": 1177086,
+        "sourceBytes": 13167505,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/13-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "13bc2744dbcb0a2506df04cfe5bd33b097916631367db2a82bb1028d22cb9b4e",
+        "sha256": "184b56a9dbcf1d3a7701407623326ba33a5f2647e62f9eb6530f5e1b1084da7e",
+        "bytes": 1280063,
+        "sourceBytes": 16781949,
+        "pages": 1
+      },
+      {
+        "file": "cases/EXPRESSO/case/14-expresso.jpg",
+        "width": 3200,
+        "height": 1800,
+        "sourceSha256": "25364b0cfa697f83e659d81d27a74e0359b6cbf0005535c1b505437a888ed7a3",
+        "sha256": "626a59096e1617a6c7d2b1d127ac1d0b33deaba40b015ec87719f2922e49a13c",
+        "bytes": 776284,
+        "sourceBytes": 7512311,
+        "pages": 1
+      }
+    ]
+  }
+}

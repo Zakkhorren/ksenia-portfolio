@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import logos from "../src/data/logofolio.json";
+import logos from "../src/data/logofolio.json" with { type: "json" };
 
 const routes = [
   "",
@@ -86,8 +86,8 @@ test("carousel navigation, client routing and history", async ({ page }) => {
     (window as unknown as { navigationMarker: number }).navigationMarker = 1;
   });
   await page.locator('.project-slide[data-position="0"] a').click();
-  await expect(page).toHaveURL(/projects\/riviera\/$/);
-  await expect(page.locator("h1")).toHaveText("RIVIERA");
+  await expect(page).toHaveURL(/projects\/fashion-lab\/$/);
+  await expect(page.locator("h1")).toHaveText("FASHION LAB");
   expect(
     await page.evaluate(
       () =>
@@ -96,7 +96,7 @@ test("carousel navigation, client routing and history", async ({ page }) => {
   ).toBe(1);
   await page.goBack();
   await expect(page.locator(".carousel-count")).toHaveText("01 / 07");
-  await page.locator(".site-nav a").last().click();
+  await page.locator('.site-nav a[href$="#about"]').click();
   await expect(page).toHaveURL(/#about$/);
   await expect
     .poll(() =>

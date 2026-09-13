@@ -3,7 +3,8 @@ import data from "../data/content.json";
 import { Image } from "./Shared";
 import { url } from "../lib/paths";
 import { pad, ru } from "../lib/typography";
-const projects = ["riviera", "fashion-lab", "expresso"].map((slug) => ({
+import assets from "../data/case-assets.json";
+const projects = ["fashion-lab", "riviera", "expresso"].map((slug) => ({
   ...data.projects.find((p) => p.slug === slug)!,
   kind: "project" as const,
 }));
@@ -122,12 +123,12 @@ export default function Carousel() {
             >
               {slide.kind === "project" ? (
                 <a
-                  class={`featured-card ${slide.class}`}
+                  class={`featured-card ${slide.class} supplied-cover`}
                   href={url(`/projects/${slide.slug}/`)}
                   tabindex={index() === active() ? 0 : -1}
                 >
                   <Image
-                    name={slide.image}
+                    name={assets.covers[index()].file}
                     alt={slide.alt}
                     priority={index() === 0}
                   />
@@ -141,7 +142,11 @@ export default function Carousel() {
                   </div>
                 </a>
               ) : (
-                <div class="featured-card project-placeholder">
+                <div class="featured-card project-placeholder supplied-cover">
+                  <Image
+                    name={assets.covers[index()].file}
+                    alt={`Обложка будущего проекта ${index() + 1}`}
+                  />
                   <div class="featured-content">
                     <p class="project-number">
                       {pad(index() + 1)}

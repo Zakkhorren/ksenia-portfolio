@@ -190,9 +190,9 @@ export default function Home() {
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="about-copy">
           <p class="eyebrow">{ru("06 / ОБО МНЕ")}</p>
-          <h2 id="about-title">{ru("Привет, я Ксения.")}</h2>
+          <h2 id="about-title">{ru("Привет, меня зовут Ксения.")}</h2>
           <p class="lead">
-            {ru("Графический дизайнер.")}
+            {ru("Я графический дизайнер.")}
             <br />
             {ru("Больше всего люблю айдентику и логотипы.")}
           </p>
@@ -301,7 +301,7 @@ export default function Home() {
             </ol>
           </div>
           <div class="outline-word outline-work" aria-hidden="true">
-            {ru("РАБОТЫ")}
+            {ru("WORK")}
           </div>
         </div>
       </section>

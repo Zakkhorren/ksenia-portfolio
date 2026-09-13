@@ -1,0 +1,96 @@
+/* Scoped to the completed sections; unfinished collection layouts stay intact. */
+.completed-page-header,
+.case-page-header {
+  container-type: inline-size;
+}
+.completed-page-header .page-title-line {
+  flex-wrap: wrap;
+  column-gap: clamp(2rem, 4vw, 5rem);
+  row-gap: 0;
+}
+.completed-page-header .page-title-line > div {
+  min-width: 0;
+  flex: 1 1 32rem;
+}
+.completed-page-header .page-title {
+  font-size: clamp(2rem, 7.35cqi, 7.5rem);
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+.completed-page-header .page-title[data-title="МАРКЕТПЛЕЙСЫ"] {
+  font-size: clamp(1.5rem, 6.1cqi, 5.5rem);
+}
+.completed-page-header .page-note {
+  flex: 0 1 19rem;
+  margin-top: clamp(1rem, 3cqi, 3rem);
+}
+.case-page-header .page-title {
+  font-size: clamp(2.5rem, 11.5cqi, 10rem);
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+.case-page-header .page-description {
+  font-size: clamp(1.2rem, 2.3cqi, 2rem);
+  line-height: 1.4;
+  margin-top: clamp(0.5rem, 1.5cqi, 1.5rem);
+}
+.case-page-header .page-note:empty {
+  display: none;
+}
+.case-presentation {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+.case-presentation > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  object-fit: contain;
+}
+.home-page .featured-card.supplied-cover img {
+  opacity: 1;
+  mix-blend-mode: normal;
+  filter: none;
+  object-position: center;
+}
+.home-page .featured-card.supplied-cover:hover img {
+  filter: none;
+}
+
+/* Compact only the final row; maintain intrinsic artwork and common baselines. */
+@media (min-width: 601px) {
+  .logo-cream {
+    grid-column: 1 / 5;
+  }
+  .logo-shark {
+    grid-column: 6 / 8;
+  }
+  .logo-shine {
+    grid-column: 9 / 13;
+  }
+  .logo-shark {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .logo-shark .logo-cue {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+/* Three navigation items fit without reducing the approved mobile type size. */
+@media (max-width: 600px) {
+  .site-header .brand-description,
+  .site-header .brand-rule {
+    display: none;
+  }
+  .site-header .site-nav {
+    gap: clamp(0.65rem, 2.7vw, 1rem);
+  }
+}
