@@ -3,35 +3,35 @@
     "file": "home-backgrounds/на главную_Логофолио.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "8e6824aaedcf38dfd4efaa8ad5781594734d08b873368a7285b5e1bcd22577d4",
-    "sourceSha256": "aa5aef0252b98a8aa10110c8025e0559e04dc1cfe8f773f535c4849eb95d53bf"
+    "sha256": "6c14e937e3654f39d48dc6f5fc87edafe940c40d356633c58bd29fff9aef9e86",
+    "sourceSha256": "178a5386a74b70f4b945a253a59051a2ffaccc16c73893a6a815a0b9648e7fdf"
   },
   "packaging": {
     "file": "home-backgrounds/на главную_Упаковка.jpg",
     "width": 2560,
     "height": 900,
     "sha256": "8d076914da5854624cfaba716385e2cd75f00b948d6fec2af8b897d0da043ccb",
-    "sourceSha256": "425e52ff3dcbcd32e7de7279cee21bfb7f354a863b6d254d3e6b0da2f73700dc"
+    "sourceSha256": "58b5c91eebf07de24fd6b72bf367b78e8bb7255fa5d97ccc13eaa8b0ac3de2c6"
   },
   "marketplace": {
     "file": "home-backgrounds/на главную_Маркетплейсы.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "2728ea06aea8641e5487ac4561a11767778f372dba38907ef64930dd9a858cbd",
-    "sourceSha256": "0dc9b0482e2b43c27571b64da891efb75d8b1bdac4213bd25fc20e5aa3bfd03f"
+    "sha256": "426485fe530e7a9bd80aae12a731792c2995c1c8a3ea302699887f441fc5212c",
+    "sourceSha256": "1cc00cf19d21f5021bc94d77cf3c50484a6bd04f6d29f6ad13e6fc774e6ac221"
   },
   "layout": {
     "file": "home-backgrounds/на главную_Вёрстка.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "2fb5dbfdef7fb1a527f92e9226e772f36a941a4bc4972023b348e2b629988aa8",
-    "sourceSha256": "d202f1b2a89505096ef54239aa281700385e318ba464059ac3caae20bcedecc3"
+    "sha256": "8cd7825d848c1e5ccf1bd97eb90a69eaa1da60d63f89b7d8ec4b702aa3e05fe5",
+    "sourceSha256": "02937c72ca3b3c70b78dbab0771450d9cb4b0bcc74a53fe8195851017789b2bb"
   },
   "experiments": {
     "file": "home-backgrounds/на главную_Эксперименты.jpg",
     "width": 2560,
     "height": 900,
     "sha256": "50e9db83006a976be3a3e8dead3eb7890de4f1e2ab8631f322cd3f19b2031815",
-    "sourceSha256": "6f509e78e2a9d9d88830964c4ca069dcdcf5c715ba49a5d5f0bf2f859eb3a6ad"
+    "sourceSha256": "d3ae21f1c3cd236a183cf6f8058f0b75bc2da8d33cf8897d8c38aa880606895d"
   }
 }
