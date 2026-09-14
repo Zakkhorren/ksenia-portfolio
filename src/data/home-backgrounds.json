@@ -3,35 +3,35 @@
     "file": "home-backgrounds/на главную_Логофолио.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "6c14e937e3654f39d48dc6f5fc87edafe940c40d356633c58bd29fff9aef9e86",
-    "sourceSha256": "6a6f54f94d0d66d70362de9177c546093642991a315120e16c4f1bdf117aca07"
+    "sha256": "8e6824aaedcf38dfd4efaa8ad5781594734d08b873368a7285b5e1bcd22577d4",
+    "sourceSha256": "aa5aef0252b98a8aa10110c8025e0559e04dc1cfe8f773f535c4849eb95d53bf"
   },
   "packaging": {
     "file": "home-backgrounds/на главную_Упаковка.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "b3199ddbb764c2809d945f16770471586f0d62a275b66f5ed1352a9eacf48a0c",
-    "sourceSha256": "bb99f190722e663d5ee41c308e60d3ff5e6810fdbb035918376f120b41ec9f07"
+    "sha256": "8d076914da5854624cfaba716385e2cd75f00b948d6fec2af8b897d0da043ccb",
+    "sourceSha256": "425e52ff3dcbcd32e7de7279cee21bfb7f354a863b6d254d3e6b0da2f73700dc"
   },
   "marketplace": {
     "file": "home-backgrounds/на главную_Маркетплейсы.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "34e4c48edd3bfa9dcf9ec49ef6c92c8f901075a434a3f30282ff07bfcbf32950",
-    "sourceSha256": "b47cee62badd8cebd24d86a45d61de67807da874d80ccb592224bef780ba576d"
+    "sha256": "2728ea06aea8641e5487ac4561a11767778f372dba38907ef64930dd9a858cbd",
+    "sourceSha256": "0dc9b0482e2b43c27571b64da891efb75d8b1bdac4213bd25fc20e5aa3bfd03f"
   },
   "layout": {
     "file": "home-backgrounds/на главную_Вёрстка.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "2bf4cf3572795ab9385300a27b85f98fdf7d2e8fd7ba52e6c9498bae55b823ac",
-    "sourceSha256": "f15506a5ec0c632d91911e388d443e444fdd48ba13fda3482cd8ba8701d911c3"
+    "sha256": "2fb5dbfdef7fb1a527f92e9226e772f36a941a4bc4972023b348e2b629988aa8",
+    "sourceSha256": "d202f1b2a89505096ef54239aa281700385e318ba464059ac3caae20bcedecc3"
   },
   "experiments": {
     "file": "home-backgrounds/на главную_Эксперименты.jpg",
     "width": 2560,
     "height": 900,
-    "sha256": "2ac3b71364338c9950e2434521c5e0863b90850e0b85ffb54ddcaa7716c52d8e",
-    "sourceSha256": "86bbf7bb94a812a650a37b43aa0723c136e778c41d4d3f96d4921fac90ebaf62"
+    "sha256": "50e9db83006a976be3a3e8dead3eb7890de4f1e2ab8631f322cd3f19b2031815",
+    "sourceSha256": "6f509e78e2a9d9d88830964c4ca069dcdcf5c715ba49a5d5f0bf2f859eb3a6ad"
   }
 }
