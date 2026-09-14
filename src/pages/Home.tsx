@@ -47,7 +47,7 @@ export default function Home() {
           <a
             class="category-row logofolio supplied-background"
             style={{
-              "background-image": `url("${asset(backgrounds.logofolio.file)}")`,
+              "background-image": `url("${asset(backgrounds.logofolio.file + "?v=" + backgrounds.logofolio.sha256.slice(0, 12))}")`,
             }}
             href={url("/work/logofolio/")}
           >
@@ -68,7 +68,7 @@ export default function Home() {
           <a
             class="category-row packaging supplied-background"
             style={{
-              "background-image": `url("${asset(backgrounds.packaging.file)}")`,
+              "background-image": `url("${asset(backgrounds.packaging.file + "?v=" + backgrounds.packaging.sha256.slice(0, 12))}")`,
             }}
             href={url("/work/packaging/")}
           >
@@ -89,7 +89,7 @@ export default function Home() {
           <a
             class="category-row marketplace supplied-background"
             style={{
-              "background-image": `url("${asset(backgrounds.marketplace.file)}")`,
+              "background-image": `url("${asset(backgrounds.marketplace.file + "?v=" + backgrounds.marketplace.sha256.slice(0, 12))}")`,
             }}
             href={url("/work/marketplace/")}
           >
@@ -110,7 +110,7 @@ export default function Home() {
           <a
             class="category-row layout supplied-background"
             style={{
-              "background-image": `url("${asset(backgrounds.layout.file)}")`,
+              "background-image": `url("${asset(backgrounds.layout.file + "?v=" + backgrounds.layout.sha256.slice(0, 12))}")`,
             }}
             href={url("/work/layout/")}
           >
@@ -131,7 +131,7 @@ export default function Home() {
           <a
             class="category-row experiments supplied-background"
             style={{
-              "background-image": `url("${asset(backgrounds.experiments.file)}")`,
+              "background-image": `url("${asset(backgrounds.experiments.file + "?v=" + backgrounds.experiments.sha256.slice(0, 12))}")`,
             }}
             href={url("/work/experiments/")}
           >
