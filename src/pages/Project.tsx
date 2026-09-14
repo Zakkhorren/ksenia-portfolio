@@ -2,7 +2,7 @@
 import data from "../data/content.json";
 import cases from "../data/case-assets.json";
 import { PageHeader, EndNavigation } from "../components/Shared";
-import { asset } from "../lib/paths";
+import { asset, url } from "../lib/paths";
 
 export default function Project(props: { slug: string }) {
   const project = () => data.projects.find((p) => p.slug === props.slug)!;
@@ -17,6 +17,18 @@ export default function Project(props: { slug: string }) {
         description={project().type}
         project
       />
+      <nav class="collection-nav case-nav" aria-label="Основные кейсы">
+        <For each={["expresso", "fashion-lab", "riviera"]}>
+          {(slug) => (
+            <a
+              href={url(`/projects/${slug}/`)}
+              aria-current={slug === props.slug ? "page" : undefined}
+            >
+              {data.projects.find((p) => p.slug === slug)!.title}
+            </a>
+          )}
+        </For>
+      </nav>
       <div
         class="case-presentation"
         aria-label={`Полный кейс ${project().title}`}

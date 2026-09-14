@@ -29,12 +29,13 @@
 .completed-page-header .page-title[data-title="ЭКСПЕРИМЕНТЫ"] {
   font-size: clamp(1.5rem, 6.1cqi, 5.5rem);
 }
-/* A soft upper overlay belongs only to the three real case cards. */
-.home-page a.featured-card.supplied-cover::after {
+/* Shared soft black overlay; light cards retain black text and a light image. */
+.home-page .featured-card.supplied-cover::after {
+  content: "";
   background: linear-gradient(
     180deg,
-    rgb(0 0 0 / 70%),
-    rgb(0 0 0 / 35%) 38%,
+    rgb(0 0 0 / 78%),
+    rgb(0 0 0 / 42%) 38%,
     transparent 78%
   );
 }
@@ -46,8 +47,13 @@
   max-width: 28rem;
   line-height: 1.4;
 }
-.home-page .project-placeholder::after {
-  content: none;
+.home-page .featured-card.placeholder-light::after {
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 8%),
+    rgb(0 0 0 / 4%) 38%,
+    transparent 78%
+  );
 }
 .home-page .featured-card.project-placeholder {
   background-size: cover;
@@ -101,4 +107,57 @@
     grid-row: 4;
     margin: 10px 0 0;
   }
+}
+
+.case-page-header .page-title-line > div {
+  width: 100%;
+  min-width: 0;
+}
+.case-page-header .page-description {
+  max-width: 100%;
+}
+.home-page .featured-content .project-year {
+  margin-top: 8px;
+  color: var(--fg);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.unavailable-notice {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(360px, calc(100vw - 40px));
+  max-width: none;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--fg);
+}
+.unavailable-notice::backdrop {
+  background: rgb(0 0 0 / 25%);
+}
+.unavailable-notice > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+}
+.unavailable-notice p {
+  margin: 0;
+  font-size: 1rem;
+}
+.unavailable-notice button {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.unavailable-notice button:focus-visible {
+  outline: 1px solid currentColor;
 }

@@ -139,6 +139,9 @@ export default function Carousel() {
                     </p>
                     <h2>{slide.title}</h2>
                     <p class="project-description">{ru(slide.type)}</p>
+                    <p class="project-year">
+                      {slide.slug === "expresso" ? "2026" : "2025"}
+                    </p>
                   </div>
                 </a>
               ) : (

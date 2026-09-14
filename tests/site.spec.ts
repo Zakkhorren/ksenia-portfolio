@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+﻿import { expect, test } from "@playwright/test";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import logos from "../src/data/logofolio.json" with { type: "json" };
@@ -137,7 +137,7 @@ test("marketplace gallery, keyboard, image cache and focus restoration", async (
   );
   await expect(page.locator(".viewer-next")).toBeDisabled();
   await page.keyboard.press("Escape");
-  await expect(page.locator("dialog")).toHaveCount(0);
+  await expect(page.locator("dialog[open]")).toHaveCount(0);
   await expect(open).toBeFocused();
   await expect(page.locator("body")).not.toHaveClass(/modal-open/);
   await open.click();

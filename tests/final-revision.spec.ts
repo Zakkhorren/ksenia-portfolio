@@ -90,7 +90,7 @@ for (const width of [320, 390, 600, 768, 1024, 1440, 1920])
       }
     }
   });
-test("case copy, overlay isolation and exact placeholder mapping", async ({
+test("case copy, shared overlay and exact placeholder mapping", async ({
   page,
 }) => {
   await page.goto("");
@@ -119,7 +119,7 @@ test("case copy, overlay isolation and exact placeholder mapping", async ({
       ["04", "05", "07", "06"][i] + "-placeholder-cover.jpg",
     );
     expect(n.size).toBe("cover");
-    expect(n.overlay).toBe("none");
+    expect(n.overlay).not.toBe("none");
     expect(n.color).toBe(n.line);
     expect(n.heading).toBe(n.color);
     if (i % 2) expect(n.color).toBe("rgb(0, 0, 0)");

@@ -1,6 +1,7 @@
 import { createEffect, createSignal, Match, onCleanup, Switch } from "solid-js";
 import { Header, Footer } from "./components/Shared";
 import Viewers from "./components/Viewers";
+import UnavailableNotice from "./components/UnavailableNotice";
 import Home from "./pages/Home";
 import Logofolio from "./pages/Logofolio";
 import Marketplace from "./pages/Marketplace";
@@ -169,6 +170,7 @@ export default function App() {
         {path() !== "/" && <Footer />}
       </main>
       <Viewers />
+      <UnavailableNotice />
     </div>
   );
 }
