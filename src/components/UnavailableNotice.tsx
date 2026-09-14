@@ -45,7 +45,7 @@ export default function UnavailableNotice() {
       }}
     >
       <div>
-        <p id="unavailable-message">Временно не работает :(</p>
+        <p id="unavailable-message">ещё собираю :)</p>
         <button
           type="button"
           aria-label="Закрыть"
