@@ -12,3 +12,6 @@ dist/
 .qa/
 test-results/
 playwright-report/
+
+# Supplied print originals are retained locally; Pages uses rendered derivatives.
+source-assets/print/

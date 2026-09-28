@@ -211,10 +211,17 @@ export function CollectionHeader(props: { slug: string }) {
 export function EndNavigation(props: { slug: string; project?: boolean }) {
   const next = () =>
     props.project
-      ? data.projects[
-          (data.projects.findIndex((p) => p.slug === props.slug) + 1) %
-            data.projects.length
-        ]
+      ? data.projects.find(
+          (p) =>
+            p.slug ===
+            (
+              {
+                expresso: "fashion-lab",
+                "fashion-lab": "riviera",
+                riviera: "expresso",
+              } as Record<string, string>
+            )[props.slug],
+        )
       : data.categories.find(
           (c) =>
             c.slug === data.categories.find((c) => c.slug === props.slug)?.next,

@@ -1,36 +1,14 @@
-﻿import { CollectionHeader, EndNavigation } from "../components/Shared";
-import { ru } from "../lib/typography";
+﻿import { createSignal, For, Show } from "solid-js";
+import { CollectionHeader, EndNavigation } from "../components/Shared";
+import PrintLightbox, { type PrintPreview } from "../components/PrintLightbox";
+import {
+  printFiles as files,
+  printPages,
+  type PrintFile,
+} from "../lib/print-assets";
+import { asset } from "../lib/paths";
 import "../styles/print.css";
 
-// Replace each labelled slot with approved imagery while keeping its ratio.
-function PrintSlot(props: {
-  id: string;
-  title: string;
-  detail: string;
-  ratio: string;
-  tone?: string;
-}) {
-  return (
-    <figure class={`print-slot ${props.tone || ""}`} data-slot={props.id}>
-      <div
-        class="print-placeholder"
-        style={{ "aspect-ratio": props.ratio }}
-        role="img"
-        aria-label={`Место для изображения: ${props.title}. ${props.detail}`}
-      >
-        <span class="print-slot-mark" aria-hidden="true">
-          +
-        </span>
-        <span class="print-slot-label">МЕСТО ДЛЯ ИЗОБРАЖЕНИЯ</span>
-        <span class="print-slot-format">{props.detail}</span>
-      </div>
-      <figcaption>
-        {ru(props.title)}
-        <span>{ru(props.detail)}</span>
-      </figcaption>
-    </figure>
-  );
-}
 function SectionHeading(props: {
   number: string;
   title: string;
@@ -46,41 +24,80 @@ function SectionHeading(props: {
     </header>
   );
 }
+function PrintItem(props: {
+  file: PrintFile;
+  title: string;
+  id?: string;
+  secondary?: boolean;
+  onOpen?: (trigger: HTMLElement) => void;
+}) {
+  const pages = printPages(props.file);
+  const images = () => (
+    <div class={`print-item-images${props.secondary ? " with-back" : ""}`}>
+      <For each={props.secondary ? pages : pages.slice(0, 1)}>
+        {(p) => (
+          <img
+            src={asset(p.preview)}
+            srcset={
+              Math.max(p.width, p.height) <= 1000
+                ? undefined
+                : `${asset(p.preview)} ${Math.round(Math.min(1, 1000 / Math.max(p.width, p.height)) * p.width)}w, ${asset(p.file)} ${p.width}w`
+            }
+            sizes="(max-width: 650px) 90vw, 45vw"
+            width={p.width}
+            height={p.height}
+            alt={props.title + (pages.length > 1 ? ` — ${p.page}` : "")}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+      </For>
+    </div>
+  );
+  return (
+    <figure class="print-item" data-source={props.file} data-project={props.id}>
+      {props.onOpen ? (
+        <button
+          class="print-open"
+          type="button"
+          aria-label={`Смотреть: ${props.title}`}
+          onClick={(e) => props.onOpen!(e.currentTarget)}
+        >
+          {images()}
+        </button>
+      ) : (
+        images()
+      )}
+      <figcaption>
+        {props.title}
+        {props.onOpen && <span aria-hidden="true">СМОТРЕТЬ ↗</span>}
+      </figcaption>
+    </figure>
+  );
+}
 export default function Layout() {
+  const [preview, setPreview] = createSignal<PrintPreview | null>(null);
+  const open =
+    (
+      title: string,
+      sources: readonly PrintFile[],
+      book = false,
+      labels?: string[],
+    ) =>
+    (trigger: HTMLElement) =>
+      setPreview({
+        title,
+        trigger,
+        book,
+        groups: sources.map((file, i) => ({
+          label: labels?.[i] || title,
+          pages: printPages(file),
+        })),
+      });
   return (
     <>
       <CollectionHeader slug="layout" />
       <div class="print-page">
-        <div class="print-intro">
-          <div class="print-intro-copy">
-            <p class="eyebrow">PRINT / EDITORIAL / MATERIALS</p>
-            <p class="print-statement">
-              На бумаге.
-              <br />В руках.
-              <br />
-              <em>В деталях.</em>
-            </p>
-            <p class="print-status">
-              Раздел собирается. Ниже — места для будущих работ, а не готовые
-              проекты.
-            </p>
-          </div>
-          <div
-            class="print-hero-papers"
-            role="img"
-            aria-label="Схема будущей композиции: афиша, разворот и визитка. Места для изображений."
-          >
-            <span class="print-paper print-paper-poster">
-              АФИША<span>МЕСТО ДЛЯ ИЗОБРАЖЕНИЯ</span>
-            </span>
-            <span class="print-paper print-paper-spread">
-              РАЗВОРОТ<span>МЕСТО ДЛЯ ИЗОБРАЖЕНИЯ</span>
-            </span>
-            <span class="print-paper print-paper-card">
-              ВИЗИТКА<span>МЕСТО ДЛЯ ИЗОБРАЖЕНИЯ</span>
-            </span>
-          </div>
-        </div>
         <section class="print-section print-business" aria-label="01 / ВИЗИТКИ">
           <SectionHeading
             number="01"
@@ -88,25 +105,17 @@ export default function Layout() {
             english="BUSINESS CARDS"
           />
           <div class="print-business-grid">
-            <PrintSlot
-              id="expresso-cards"
+            <PrintItem
+              file={files.expressoMockup}
               title="Expresso"
-              detail="Лицевая и оборотная стороны · композиция карточек"
-              ratio="3 / 2"
-              tone="paper"
+              id="expresso-cards"
+              onOpen={open("Expresso", [files.expresso])}
             />
-            <PrintSlot
-              id="fashion-cards"
+            <PrintItem
+              file={files.fashionMockup}
               title="Fashion Lab"
-              detail="Несколько карточек · наложение и крупный план"
-              ratio="4 / 5"
-              tone="wine"
-            />
-            <PrintSlot
-              id="expresso-detail"
-              title="Expresso / Деталь"
-              detail="Бумага и печать · крупный план"
-              ratio="2 / 1"
+              id="fashion-cards"
+              onOpen={open("Fashion Lab", [files.fashion])}
             />
           </div>
         </section>
@@ -120,26 +129,11 @@ export default function Layout() {
             english="POSTERS / OUTDOOR"
           />
           <div class="print-posters-grid">
-            <PrintSlot
-              id="music-poster"
-              title="World Music Heritage"
-              detail="Вертикальная афиша"
-              ratio="2 / 3"
-              tone="wine"
-            />
-            <PrintSlot
-              id="korean-posters"
-              title="Korean Film Festival"
-              detail="Серия афиш"
-              ratio="4 / 3"
-              tone="paper"
-            />
-            <PrintSlot
-              id="music-outdoor"
-              title="World Music Heritage / Outdoor"
-              detail="Наружный баннер · 6 × 3 м"
-              ratio="2 / 1"
-            />
+            <For each={files.posters}>
+              {(file, i) => (
+                <PrintItem file={file} title={`Афиша / 0${i() + 1}`} />
+              )}
+            </For>
           </div>
         </section>
         <section
@@ -152,25 +146,31 @@ export default function Layout() {
             english="PRINT MATERIALS"
           />
           <div class="print-materials-grid">
-            <PrintSlot
-              id="certificates"
-              title="Дипломы и сертификаты"
-              detail="Листы и комплекты · вид сверху"
-              ratio="1.414 / 1"
-              tone="paper"
-            />
-            <PrintSlot
+            <For each={files.materials}>
+              {(file, i) => (
+                <PrintItem
+                  file={file}
+                  title={
+                    [
+                      "Лифлет / 01",
+                      "Лифлет / 02",
+                      "Сертификат",
+                      "Грамоты",
+                      "Листовка",
+                    ][i()]
+                  }
+                />
+              )}
+            </For>
+            <PrintItem
+              file={files.postcardsMockup}
+              title="Береги природу / Открытки"
               id="postcards"
-              title="Открытки"
-              detail="Лицевая сторона и оборот"
-              ratio="3 / 2"
-              tone="wine"
-            />
-            <PrintSlot
-              id="leaflets"
-              title="Промолистовки"
-              detail="Печатные форматы · детали"
-              ratio="3 / 4"
+              onOpen={open("Береги природу", files.postcards, false, [
+                "Гора",
+                "Лес",
+                "Город",
+              ])}
             />
           </div>
         </section>
@@ -184,37 +184,52 @@ export default function Layout() {
             english="CATALOGS / EDITORIAL"
           />
           <div class="print-editorial-grid">
-            <PrintSlot
-              id="aviation-publication"
-              title="Издание об авиационной промышленности"
-              detail="Основная композиция · открытое издание"
-              ratio="16 / 9"
-              tone="paper"
+            <PrintItem
+              file={files.mercedesCover}
+              title="Mercedes"
+              id="mercedes"
+              secondary
+              onOpen={open("Mercedes", [files.mercedes], true)}
             />
-            <PrintSlot
-              id="aviation-spread"
-              title="Авиационное издание / Разворот"
-              detail="Плоская подача · сетка и иерархия"
-              ratio="2 / 1"
+            <PrintItem
+              file={files.aviapromMockup}
+              title="Авиапром"
+              id="aviaprom"
+              onOpen={open("Авиапром", [files.aviaprom], true)}
             />
-            <PrintSlot
-              id="newspaper"
-              title="Газетные макеты"
-              detail="Полосы · плотная типографика"
-              ratio="3 / 4"
-              tone="wine"
-            />
-            <PrintSlot
-              id="editorial-spreads"
-              title="Журнальные развороты"
-              detail="Ритм текста и изображения"
-              ratio="3 / 2"
-              tone="paper"
-            />
+            <For each={files.newspapers}>
+              {(file, i) => (
+                <PrintItem
+                  file={file}
+                  title={
+                    i() === 0 ? "Роснефть / Газетная полоса" : "Газетная полоса"
+                  }
+                  id={`newspaper-${i() + 1}`}
+                  onOpen={open(i() === 0 ? "Роснефть" : "Газетная полоса", [
+                    file,
+                  ])}
+                />
+              )}
+            </For>
+            <For each={files.spreads}>
+              {(file, i) => (
+                <PrintItem
+                  file={file}
+                  title={`Разворот / 0${i() + 1}`}
+                  id={`spread-${i() + 1}`}
+                  onOpen={open(`Разворот / 0${i() + 1}`, [file])}
+                />
+              )}
+            </For>
           </div>
         </section>
       </div>
       <EndNavigation slug="layout" />
+      <Show when={preview()}>
+        {(p) => (
+          <PrintLightbox preview={p()} onClose={() => setPreview(null)} />
+        )}
+      </Show>
     </>
   );
 }

@@ -166,13 +166,13 @@ test("logo viewer preserves variants and changes projects", async ({
   await expect(open).toBeFocused();
 });
 
-test("print page replaces the temporary magazine with four planned collections", async ({
+test("print page replaces the temporary magazine with four completed collections", async ({
   page,
 }) => {
   await page.goto("work/layout/");
   await expect(page.locator("h1")).toHaveText("ПОЛИГРАФИЯ");
   await expect(page.locator(".print-section")).toHaveCount(4);
-  await expect(page.locator(".print-placeholder")).toHaveCount(13);
+  await expect(page.locator(".print-placeholder")).toHaveCount(0);
   await expect(page.locator(".magazine-open")).toHaveCount(0);
 });
 

@@ -1,0 +1,452 @@
+{
+  "1. Блок мерс.pdf": {
+    "source": "1. Блок мерс.pdf",
+    "sha256": "8e7d3a2bf9fe6e50579eeb6935cc615071d2f5e7e060802f93ec48cde09d34f3",
+    "pages": [
+      {
+        "file": "print/1. Блок мерс.pdf/01.webp",
+        "preview": "print/1. Блок мерс.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 1
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/02.webp",
+        "preview": "print/1. Блок мерс.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 2
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/03.webp",
+        "preview": "print/1. Блок мерс.pdf/03-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 3
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/04.webp",
+        "preview": "print/1. Блок мерс.pdf/04-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 4
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/05.webp",
+        "preview": "print/1. Блок мерс.pdf/05-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 5
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/06.webp",
+        "preview": "print/1. Блок мерс.pdf/06-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 6
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/07.webp",
+        "preview": "print/1. Блок мерс.pdf/07-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 7
+      },
+      {
+        "file": "print/1. Блок мерс.pdf/08.webp",
+        "preview": "print/1. Блок мерс.pdf/08-preview.webp",
+        "width": 2600,
+        "height": 1782,
+        "page": 8
+      }
+    ]
+  },
+  "1. Обложка мерс.pdf": {
+    "source": "1. Обложка мерс.pdf",
+    "sha256": "65152778c9fe9f2cd2ed34aed4555c90d2d849af235edb21db895077b83869d7",
+    "pages": [
+      {
+        "file": "print/1. Обложка мерс.pdf/01.webp",
+        "preview": "print/1. Обложка мерс.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1796,
+        "page": 1
+      },
+      {
+        "file": "print/1. Обложка мерс.pdf/02.webp",
+        "preview": "print/1. Обложка мерс.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1796,
+        "page": 2
+      }
+    ]
+  },
+  "2. Верстка одной полосы газеты роснефть.pdf": {
+    "source": "2. Верстка одной полосы газеты роснефть.pdf",
+    "sha256": "5ffff75b0dc4bfe9534ba3c1dcc4b3a81ebf903a0421d9dd88746e397426e47c",
+    "pages": [
+      {
+        "file": "print/2. Верстка одной полосы газеты роснефть.pdf/01.webp",
+        "preview": "print/2. Верстка одной полосы газеты роснефть.pdf/01-preview.webp",
+        "width": 1839,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "3. верстка одной полосы какой-то газеты.pdf": {
+    "source": "3. верстка одной полосы какой-то газеты.pdf",
+    "sha256": "7a061b9cfb6b5ae4129a2e52d93887655480e003892eb5015ae41e093a83dd94",
+    "pages": [
+      {
+        "file": "print/3. верстка одной полосы какой-то газеты.pdf/01.webp",
+        "preview": "print/3. верстка одной полосы какой-то газеты.pdf/01-preview.webp",
+        "width": 1839,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "4.1. Мокап авиапром на превью.jpg": {
+    "source": "4.1. Мокап авиапром на превью.jpg",
+    "sha256": "9591bee3225aea10977320bba96fcbd10b4a1013b4ae3f512493b4c6cec8bfea",
+    "pages": [
+      {
+        "file": "print/4.1. Мокап авиапром на превью.jpg/01.webp",
+        "preview": "print/4.1. Мокап авиапром на превью.jpg/01-preview.webp",
+        "width": 2600,
+        "height": 1733,
+        "page": 1
+      }
+    ]
+  },
+  "4.2 журнал авиапром внутр блок.pdf": {
+    "source": "4.2 журнал авиапром внутр блок.pdf",
+    "sha256": "a1c4808b5915bee1b506e394a91477985d42f50b9720a503a00c613b265a20a7",
+    "pages": [
+      {
+        "file": "print/4.2 журнал авиапром внутр блок.pdf/01.webp",
+        "preview": "print/4.2 журнал авиапром внутр блок.pdf/01-preview.webp",
+        "width": 1900,
+        "height": 2600,
+        "page": 1
+      },
+      {
+        "file": "print/4.2 журнал авиапром внутр блок.pdf/02.webp",
+        "preview": "print/4.2 журнал авиапром внутр блок.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1779,
+        "page": 2
+      },
+      {
+        "file": "print/4.2 журнал авиапром внутр блок.pdf/03.webp",
+        "preview": "print/4.2 журнал авиапром внутр блок.pdf/03-preview.webp",
+        "width": 1900,
+        "height": 2600,
+        "page": 3
+      }
+    ]
+  },
+  "5. Рандомный блок разворотом.pdf": {
+    "source": "5. Рандомный блок разворотом.pdf",
+    "sha256": "c1402948eafcf78e85982c90f56fa39479ddbc734cba2e70df943b1cbb9c272f",
+    "pages": [
+      {
+        "file": "print/5. Рандомный блок разворотом.pdf/01.webp",
+        "preview": "print/5. Рандомный блок разворотом.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1708,
+        "page": 1
+      },
+      {
+        "file": "print/5. Рандомный блок разворотом.pdf/02.webp",
+        "preview": "print/5. Рандомный блок разворотом.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1708,
+        "page": 2
+      }
+    ]
+  },
+  "6. Рандомный блок разворотом.pdf": {
+    "source": "6. Рандомный блок разворотом.pdf",
+    "sha256": "be2ccb501c70cd630e08a60e1b8af85e8881c51d466887cc4a0f67cb2743b982",
+    "pages": [
+      {
+        "file": "print/6. Рандомный блок разворотом.pdf/01.webp",
+        "preview": "print/6. Рандомный блок разворотом.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1729,
+        "page": 1
+      }
+    ]
+  },
+  "7. Рандомный блок разворотом.pdf": {
+    "source": "7. Рандомный блок разворотом.pdf",
+    "sha256": "91fd56ba665d2499dcb8fa760b45f363188fb450549b22c87763ab3c070a2118",
+    "pages": [
+      {
+        "file": "print/7. Рандомный блок разворотом.pdf/01.webp",
+        "preview": "print/7. Рандомный блок разворотом.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1449,
+        "page": 1
+      }
+    ]
+  },
+  "Expresso визитка.pdf": {
+    "source": "Expresso визитка.pdf",
+    "sha256": "c38ea89b7b8a96d17d6d5fc24adf269874546d302d9705da85207fd03c81ccba",
+    "pages": [
+      {
+        "file": "print/Expresso визитка.pdf/01.webp",
+        "preview": "print/Expresso визитка.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1445,
+        "page": 1
+      },
+      {
+        "file": "print/Expresso визитка.pdf/02.webp",
+        "preview": "print/Expresso визитка.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1445,
+        "page": 2
+      }
+    ]
+  },
+  "FashionLab визитка.pdf": {
+    "source": "FashionLab визитка.pdf",
+    "sha256": "200ff540db0becf66451b79fc71afb60ee9eeb138efa1bdc894affd56ed44351",
+    "pages": [
+      {
+        "file": "print/FashionLab визитка.pdf/01.webp",
+        "preview": "print/FashionLab визитка.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1445,
+        "page": 1
+      },
+      {
+        "file": "print/FashionLab визитка.pdf/02.webp",
+        "preview": "print/FashionLab визитка.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1445,
+        "page": 2
+      }
+    ]
+  },
+  "береги природу открытка 1 гора.pdf": {
+    "source": "береги природу открытка 1 гора.pdf",
+    "sha256": "1c76e81313ce4d84e72984a23e7eec99129de25388363f695ce7145f3dadb480",
+    "pages": [
+      {
+        "file": "print/береги природу открытка 1 гора.pdf/01.webp",
+        "preview": "print/береги природу открытка 1 гора.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 1
+      },
+      {
+        "file": "print/береги природу открытка 1 гора.pdf/02.webp",
+        "preview": "print/береги природу открытка 1 гора.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 2
+      }
+    ]
+  },
+  "береги природу открытка 2 лес.pdf": {
+    "source": "береги природу открытка 2 лес.pdf",
+    "sha256": "2bfbf2594b8e6a79f14966c8be31237ac3932a62f4d933498c31b9d91a14f14b",
+    "pages": [
+      {
+        "file": "print/береги природу открытка 2 лес.pdf/01.webp",
+        "preview": "print/береги природу открытка 2 лес.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 1
+      },
+      {
+        "file": "print/береги природу открытка 2 лес.pdf/02.webp",
+        "preview": "print/береги природу открытка 2 лес.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 2
+      }
+    ]
+  },
+  "береги природу открытка 3 город.pdf": {
+    "source": "береги природу открытка 3 город.pdf",
+    "sha256": "00e80e7354cae1281bd68421caac46642a51e8bea85f6c306ab0044eff7c26f9",
+    "pages": [
+      {
+        "file": "print/береги природу открытка 3 город.pdf/01.webp",
+        "preview": "print/береги природу открытка 3 город.pdf/01-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 1
+      },
+      {
+        "file": "print/береги природу открытка 3 город.pdf/02.webp",
+        "preview": "print/береги природу открытка 3 город.pdf/02-preview.webp",
+        "width": 2600,
+        "height": 1339,
+        "page": 2
+      }
+    ]
+  },
+  "визитки expresso мокап.pdf": {
+    "source": "визитки expresso мокап.pdf",
+    "sha256": "32c0fa102c91658d1880e51718ef945ec214e6d8812bf6bd2084792f8f3e638d",
+    "pages": [
+      {
+        "file": "print/визитки expresso мокап.pdf/01.webp",
+        "preview": "print/визитки expresso мокап.pdf/01-preview.webp",
+        "width": 2340,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "визитки fashionlab мокап.pdf": {
+    "source": "визитки fashionlab мокап.pdf",
+    "sha256": "b35d622275b0d9c7e730fe68a1623314ef6366eebbca7d95976ddc724fad9778",
+    "pages": [
+      {
+        "file": "print/визитки fashionlab мокап.pdf/01.webp",
+        "preview": "print/визитки fashionlab мокап.pdf/01-preview.webp",
+        "width": 2340,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "Грамоты.jpg": {
+    "source": "Грамоты.jpg",
+    "sha256": "4f86eb1bdb3a5fccd8d09b41174b289e5f9a88a6dbb6261d3a1f4a5d9c5eddd8",
+    "pages": [
+      {
+        "file": "print/Грамоты.jpg/01.webp",
+        "preview": "print/Грамоты.jpg/01-preview.webp",
+        "width": 2600,
+        "height": 1733,
+        "page": 1
+      }
+    ]
+  },
+  "листовка.jpg": {
+    "source": "листовка.jpg",
+    "sha256": "e7eade32ad3e2d7df09ff2c3f52978cd85d024543ddd29e493ae3611204c5146",
+    "pages": [
+      {
+        "file": "print/листовка.jpg/01.webp",
+        "preview": "print/листовка.jpg/01-preview.webp",
+        "width": 2600,
+        "height": 1950,
+        "page": 1
+      }
+    ]
+  },
+  "Лифлет 1.png": {
+    "source": "Лифлет 1.png",
+    "sha256": "16572c6c21176e986f177bc313b01d4a73c7876a34aed3110389f3e53c0dd603",
+    "pages": [
+      {
+        "file": "print/Лифлет 1.png/01.webp",
+        "preview": "print/Лифлет 1.png/01-preview.webp",
+        "width": 716,
+        "height": 720,
+        "page": 1
+      }
+    ]
+  },
+  "Лифлет 2.png": {
+    "source": "Лифлет 2.png",
+    "sha256": "e6ad803ba5c279f2f4158497692e7a59ffdf1363b94c6de820224357f5c59948",
+    "pages": [
+      {
+        "file": "print/Лифлет 2.png/01.webp",
+        "preview": "print/Лифлет 2.png/01-preview.webp",
+        "width": 689,
+        "height": 720,
+        "page": 1
+      }
+    ]
+  },
+  "мокап для серии открыток.jpg": {
+    "source": "мокап для серии открыток.jpg",
+    "sha256": "f5ff32fc42f5efef9bebb8911d670a11924b50dfe027711899a071988774e4eb",
+    "pages": [
+      {
+        "file": "print/мокап для серии открыток.jpg/01.webp",
+        "preview": "print/мокап для серии открыток.jpg/01-preview.webp",
+        "width": 2600,
+        "height": 1733,
+        "page": 1
+      }
+    ]
+  },
+  "Плакат 1.jpg": {
+    "source": "Плакат 1.jpg",
+    "sha256": "621f4f50805c49c3ecd4f2d95d9055f4fb65e1ca4419bdd77c77b4d7cb78d1fd",
+    "pages": [
+      {
+        "file": "print/Плакат 1.jpg/01.webp",
+        "preview": "print/Плакат 1.jpg/01-preview.webp",
+        "width": 1779,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "Плакат 2.png": {
+    "source": "Плакат 2.png",
+    "sha256": "b191210330fdfa22f28cd3509ef3d0de44a8d98bf4e3b28d97d28b36ce39c396",
+    "pages": [
+      {
+        "file": "print/Плакат 2.png/01.webp",
+        "preview": "print/Плакат 2.png/01-preview.webp",
+        "width": 690,
+        "height": 1008,
+        "page": 1
+      }
+    ]
+  },
+  "Плакат 3.jpg": {
+    "source": "Плакат 3.jpg",
+    "sha256": "b8511c0473555201fbd3ef3fc0580fb6bc9b74d922a61bdc1b55f243f9c2a9e5",
+    "pages": [
+      {
+        "file": "print/Плакат 3.jpg/01.webp",
+        "preview": "print/Плакат 3.jpg/01-preview.webp",
+        "width": 1779,
+        "height": 2600,
+        "page": 1
+      }
+    ]
+  },
+  "Плакат 4.png": {
+    "source": "Плакат 4.png",
+    "sha256": "7fe9b6bca0d03b8c4c610e13f1b6cda1040c950962ecf95104a750c8c5f42e6e",
+    "pages": [
+      {
+        "file": "print/Плакат 4.png/01.webp",
+        "preview": "print/Плакат 4.png/01-preview.webp",
+        "width": 659,
+        "height": 963,
+        "page": 1
+      }
+    ]
+  },
+  "Сертификат.png": {
+    "source": "Сертификат.png",
+    "sha256": "85c5dad8593d56c416deae682a12208ac93608b283e2d04f19c9356dfedf61c5",
+    "pages": [
+      {
+        "file": "print/Сертификат.png/01.webp",
+        "preview": "print/Сертификат.png/01-preview.webp",
+        "width": 837,
+        "height": 720,
+        "page": 1
+      }
+    ]
+  }
+}

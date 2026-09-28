@@ -38,7 +38,7 @@ for (const width of [320, 390, 768, 1440])
       "ПЕЧАТНЫЕ МАТЕРИАЛЫ",
       "МНОГОСТРАНИЧКА",
     ]);
-    await expect(page.locator(".print-placeholder")).toHaveCount(13);
+    await expect(page.locator(".print-placeholder")).toHaveCount(0);
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(
@@ -46,7 +46,7 @@ for (const width of [320, 390, 768, 1440])
       ),
     ).toBe(true);
     for (const section of await page.locator(".print-section").all()) {
-      const boxes = await section.locator(".print-slot").evaluateAll((ns) =>
+      const boxes = await section.locator(".print-item").evaluateAll((ns) =>
         ns.map((n) => {
           const r = n.getBoundingClientRect();
           return { x: r.x, y: r.y, right: r.right, bottom: r.bottom };
