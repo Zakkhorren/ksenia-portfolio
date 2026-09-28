@@ -86,8 +86,8 @@ test("carousel navigation, client routing and history", async ({ page }) => {
     (window as unknown as { navigationMarker: number }).navigationMarker = 1;
   });
   await page.locator('.project-slide[data-position="0"] a').click();
-  await expect(page).toHaveURL(/projects\/fashion-lab\/$/);
-  await expect(page.locator("h1")).toHaveText("FASHION LAB");
+  await expect(page).toHaveURL(/projects\/expresso\/$/);
+  await expect(page.locator("h1")).toHaveText("EXPRESSO");
   expect(
     await page.evaluate(
       () =>
@@ -166,19 +166,14 @@ test("logo viewer preserves variants and changes projects", async ({
   await expect(open).toBeFocused();
 });
 
-test("reader opens, turns spreads and closes", async ({ page }) => {
+test("print page replaces the temporary magazine with four planned collections", async ({
+  page,
+}) => {
   await page.goto("work/layout/");
-  await page.locator(".magazine-open").click();
-  await expect(page.locator(".publication-reader")).toBeVisible();
-  await expect(page.locator(".reader-count")).toHaveText("01 / 08");
-  await page.locator(".reader-next").click();
-  await expect(page.locator(".reader-count")).toHaveText("02–03 / 08");
-  await expect(page.locator(".reader-stage .paper-page")).toHaveCount(2);
-  await page.locator(".reader-thumbs button").last().click();
-  await expect(page.locator(".reader-count")).toHaveText("08 / 08");
-  await expect(page.locator(".reader-next")).toBeDisabled();
-  await page.keyboard.press("Escape");
-  await expect(page.locator(".magazine-open")).toBeFocused();
+  await expect(page.locator("h1")).toHaveText("ПОЛИГРАФИЯ");
+  await expect(page.locator(".print-section")).toHaveCount(4);
+  await expect(page.locator(".print-placeholder")).toHaveCount(13);
+  await expect(page.locator(".magazine-open")).toHaveCount(0);
 });
 
 test("original SVG hashes are unchanged", async () => {

@@ -134,7 +134,7 @@ const labels: Record<string, string> = {
   logofolio: "LOGOFOLIO",
   packaging: "PACKAGING",
   marketplace: "E-COMMERCE",
-  layout: "LAYOUT",
+  layout: "PRINT / EDITORIAL / MATERIALS",
   experiments: "PLAYGROUND",
 };
 export function PageHeader(props: {

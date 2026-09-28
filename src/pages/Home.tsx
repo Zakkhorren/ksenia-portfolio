@@ -115,10 +115,10 @@ export default function Home() {
             href={url("/work/layout/")}
           >
             <div class="category-copy">
-              <p class="eyebrow">{ru("04 / EDITORIAL")}</p>
-              <h3>{ru("ВЁРСТКА")}</h3>
+              <p class="eyebrow">{ru("04 / PRINT")}</p>
+              <h3>{ru("ПОЛИГРАФИЯ")}</h3>
               <p class="category-description">
-                {ru("журналы / буклеты / многостраничные издания")}
+                {ru("PRINT / EDITORIAL / MATERIALS")}
               </p>
               <span class="category-view">
                 {ru("СМОТРЕТЬ ")}

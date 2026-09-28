@@ -15,16 +15,16 @@ test("seven mapped covers, four inert placeholders", async ({ page }) => {
         images.map((image) => image.getAttribute("src")),
       ),
   ).toEqual(
-    assets.covers
-      .slice(0, 3)
-      .map((image) => `/ksenia-portfolio/assets/${image.file}`),
+    [assets.covers[2], assets.covers[0], assets.covers[1]].map(
+      (image) => `/ksenia-portfolio/assets/${image.file}`,
+    ),
   );
   expect(
     await cards
       .locator("a")
       .evaluateAll((links) => links.map((link) => link.getAttribute("href"))),
   ).toEqual(
-    ["fashion-lab", "riviera", "expresso"].map(
+    ["expresso", "fashion-lab", "riviera"].map(
       (slug) => `/ksenia-portfolio/projects/${slug}/`,
     ),
   );

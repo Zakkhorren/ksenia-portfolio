@@ -161,3 +161,22 @@
 .unavailable-notice button:focus-visible {
   outline: 1px solid currentColor;
 }
+
+/* September print revision: beige carousel cards keep their approved overlay. */
+.home-page .featured-card.supplied-cover:not(.placeholder-light)::after {
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 88%),
+    rgb(0 0 0 / 65%) 42%,
+    rgb(0 0 0 / 10%) 85%,
+    transparent
+  );
+}
+@media (max-width: 600px) {
+  .home-page .other-heading .other-note {
+    position: static;
+    width: max-content;
+    max-width: 100%;
+    margin: 14px 3% 8px auto;
+  }
+}

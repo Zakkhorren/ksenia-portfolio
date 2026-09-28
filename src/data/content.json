@@ -100,15 +100,15 @@
     },
     {
       "slug": "layout",
-      "title": "LAYOUT",
-      "page_title": "ВЁРСТКА",
+      "title": "PRINT",
+      "page_title": "ПОЛИГРАФИЯ",
       "number": "04",
-      "label": "EDITORIAL",
-      "description": "Журналы, многостраничные издания и печатная графика.",
-      "tagline": "MAGAZINES / BOOKLETS /\nPRINTED STORIES",
+      "label": "PRINT / EDITORIAL / MATERIALS",
+      "description": "От визитки до многостраничного издания.",
+      "tagline": "PRINT / EDITORIAL / MATERIALS",
       "image": "editorial.png",
       "alt": "Разворот журнала об архитектуре FORMA",
-      "note": "Всё держится на сетке",
+      "note": "Идеи обретают форму",
       "next": "experiments"
     },
     {

@@ -3,7 +3,6 @@ import { routePath } from "../lib/paths";
 
 const unavailable = new Set([
   "/work/packaging/",
-  "/work/layout/",
   "/work/experiments/",
 ]);
 

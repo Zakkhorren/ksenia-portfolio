@@ -17,8 +17,8 @@ const copy = [
   ],
   [
     "layout",
-    "Журналы, многостраничные издания и печатная графика.",
-    "Всё держится на сетке",
+    "От визитки до многостраничного издания.",
+    "Идеи обретают форму",
   ],
   [
     "experiments",
@@ -96,9 +96,9 @@ test("case copy, shared overlay and exact placeholder mapping", async ({
   await page.goto("");
   await expect(page.locator("a.featured-card .project-description")).toHaveText(
     [
+      "Айдентика / Кофейня",
       "Айдентика / Бренд одежды",
       "Айдентика / Круизы и путешествия",
-      "Айдентика / Кофейня",
     ],
   );
   const placeholders = page.locator(".project-placeholder");
@@ -129,7 +129,7 @@ test("case copy, shared overlay and exact placeholder mapping", async ({
       .locator("a.featured-card")
       .first()
       .evaluate((n) => getComputedStyle(n, "::after").backgroundImage),
-  ).toContain("0.7");
+  ).toContain("0.88");
   for (const [slug, description] of [
     ["fashion-lab", "Айдентика / Бренд одежды"],
     ["riviera", "Айдентика / Круизы и путешествия"],

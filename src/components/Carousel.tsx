@@ -4,7 +4,7 @@ import { Image } from "./Shared";
 import { asset, url } from "../lib/paths";
 import { pad, ru } from "../lib/typography";
 import assets from "../data/case-assets.json";
-const projects = ["fashion-lab", "riviera", "expresso"].map((slug) => ({
+const projects = ["expresso", "fashion-lab", "riviera"].map((slug) => ({
   ...data.projects.find((p) => p.slug === slug)!,
   kind: "project" as const,
 }));
@@ -128,7 +128,7 @@ export default function Carousel() {
                   tabindex={index() === active() ? 0 : -1}
                 >
                   <Image
-                    name={assets.covers[index()].file}
+                    name={assets.covers[[2, 0, 1][index()]].file}
                     alt={slide.alt}
                     priority={index() === 0}
                   />

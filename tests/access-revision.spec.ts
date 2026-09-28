@@ -4,9 +4,9 @@ for (const width of [390, 768, 1440])
     await page.setViewportSize({ width, height: 960 });
     await page.goto("");
     await expect(page.locator(".project-year")).toHaveText([
-      "2025",
-      "2025",
       "2026",
+      "2025",
+      "2025",
     ]);
     for (const slug of ["expresso", "fashion-lab", "riviera"]) {
       await page.goto(`projects/${slug}/`);
@@ -52,14 +52,14 @@ test("every UI link to unavailable collections opens notice without navigation",
     await page.locator("h1").waitFor();
     const initial = page.url();
     const links = page.locator(
-      'a[href*="/work/packaging/"],a[href*="/work/layout/"],a[href*="/work/experiments/"]',
+      'a[href*="/work/packaging/"],a[href*="/work/experiments/"]',
     );
     for (let i = 0; i < (await links.count()); i++) {
       const link = links.nth(i);
       await link.click();
       await expect(page.locator(".unavailable-notice")).toBeVisible();
       await expect(page.locator("#unavailable-message")).toHaveText(
-        "Временно не работает :(",
+        "ещё собираю :)",
       );
       expect(page.url()).toBe(initial);
       await page.keyboard.press("Escape");
