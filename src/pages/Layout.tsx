@@ -89,6 +89,13 @@ export default function Layout() {
         title,
         trigger,
         book,
+        structure:
+          sources[0] === files.aviaprom ? "single-spread-single" : "pages",
+        editorial: sources.some((file) =>
+          [...files.newspapers, ...files.spreads].some(
+            (source) => source === file,
+          ),
+        ),
         groups: sources.map((file, i) => ({
           label: labels?.[i] || title,
           pages: printPages(file),
@@ -186,10 +193,9 @@ export default function Layout() {
           <div class="print-editorial-grid">
             <PrintItem
               file={files.mercedesCover}
-              title="Mercedes"
+              title="Каталог Mercedes-Benz"
               id="mercedes"
-              secondary
-              onOpen={open("Mercedes", [files.mercedes], true)}
+              onOpen={open("Каталог Mercedes-Benz", [files.mercedes], true)}
             />
             <PrintItem
               file={files.aviapromMockup}

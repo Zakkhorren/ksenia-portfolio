@@ -1,11 +1,13 @@
 ﻿import { createEffect, For } from "solid-js";
 import { asset } from "../lib/paths";
 import type { PrintPage } from "../lib/print-assets";
-import Publication from "./Publication";
+import Publication, { type PublicationStructure } from "./Publication";
 export type PrintPreview = {
   title: string;
   groups: { label: string; pages: PrintPage[] }[];
   book?: boolean;
+  structure?: PublicationStructure;
+  editorial?: boolean;
   trigger: HTMLElement;
 };
 export default function PrintLightbox(props: {
@@ -30,7 +32,17 @@ export default function PrintLightbox(props: {
   return (
     <dialog
       ref={dialog}
-      class={`print-lightbox${props.preview.book ? " publication-modal" : ""}`}
+      class={`print-lightbox${props.preview.book ? " publication-modal" : props.preview.editorial ? " editorial-modal" : ""}`}
+      style={
+        props.preview.book
+          ? {
+              "--page-ratio": String(
+                props.preview.groups[0].pages[0].width /
+                  props.preview.groups[0].pages[0].height,
+              ),
+            }
+          : undefined
+      }
       aria-labelledby="print-lightbox-title"
       onClose={props.onClose}
       onClick={(e) => {
@@ -52,6 +64,7 @@ export default function PrintLightbox(props: {
           <Publication
             pages={props.preview.groups[0].pages}
             title={props.preview.title}
+            structure={props.preview.structure}
           />
         ) : (
           <div class="print-static-groups">

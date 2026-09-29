@@ -203,14 +203,60 @@
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+/* Only the section 04 publication viewers use a fixed modal shell. */
+.print-lightbox.publication-modal {
+  height: min(
+    94dvh,
+    calc(min(1310px, 100vw - 82px) / (var(--page-ratio) * 2) + 160px)
+  );
+  overflow: hidden;
+}
+.publication-modal .print-lightbox-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 72px minmax(0, 1fr);
+  box-sizing: border-box;
+}
+.publication-modal .print-lightbox-head {
+  position: static;
+  min-width: 0;
+}
+.print-publication {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 62px;
+}
+.book-space {
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+}
+.book-window {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+.book-window.is-zoomed {
+  overflow: auto;
+  touch-action: pan-x pan-y;
+}
+.book-canvas {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.is-zoomed .book-canvas {
+  width: 200%;
+  height: 200%;
+}
 .book-stage {
   position: relative;
   isolation: isolate;
-  perspective: 1800px;
-  aspect-ratio: var(--book-ratio);
-  width: 100%;
-  max-height: 72dvh;
-  margin: auto;
+  perspective: 5000px;
+  flex-shrink: 0;
 }
 .book-spread {
   display: flex;
@@ -232,6 +278,10 @@
   object-fit: contain;
   user-select: none;
 }
+.book-whole-spread {
+  position: absolute;
+  inset: 0;
+}
 .book-blank {
   display: block;
   width: 100%;
@@ -249,12 +299,12 @@
 .book-leaf.forward {
   left: 50%;
   transform-origin: left center;
-  animation: print-turn-forward 0.65s ease-in-out both;
+  animation: print-turn-forward 0.34s ease-in-out both;
 }
 .book-leaf.backward {
   left: 0;
   transform-origin: right center;
-  animation: print-turn-backward 0.65s ease-in-out both;
+  animation: print-turn-backward 0.34s ease-in-out both;
 }
 .leaf-face {
   position: absolute;
@@ -267,17 +317,50 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  animation: print-paper-shadow 0.65s ease-in-out both;
+  animation: print-paper-shadow 0.34s ease-in-out both;
 }
 .leaf-back {
   transform: rotateY(180deg);
+}
+.book-rest {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  background: #111110;
+  pointer-events: none;
+}
+.rest-left {
+  left: 0;
+}
+.rest-right {
+  left: 50%;
+}
+.book-half {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.book-half img {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  max-width: none;
+}
+.half-left img {
+  left: 0;
+}
+.half-right img {
+  right: 0;
 }
 .book-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin-top: 22px;
+  min-height: 0;
 }
 .book-controls button {
   width: 44px;
@@ -293,38 +376,50 @@
   cursor: default;
 }
 .book-position {
-  min-width: 75px;
+  width: 75px;
   text-align: center;
   font-size: 0.75rem;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.single-page .book-page,
-.single-page .book-leaf {
+.single-page {
+  grid-template-rows: minmax(0, 1fr) 62px 32px;
+}
+.single-page .book-page {
   width: 100%;
 }
-.single-page .book-leaf.forward {
-  left: 0;
+.single-page .book-stage {
+  perspective: none;
+}
+.book-zoom {
+  justify-self: center;
+  padding: 4px 12px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.mobile-next {
+  animation: print-mobile-next 0.18s ease-out both;
+}
+.mobile-previous {
+  animation: print-mobile-previous 0.18s ease-out both;
 }
 @keyframes print-turn-forward {
-  0% {
+  from {
     transform: rotateY(0);
   }
-  45% {
-    transform: translateZ(14px) rotateY(-80deg);
-  }
-  100% {
+  to {
     transform: rotateY(-180deg);
   }
 }
 @keyframes print-turn-backward {
-  0% {
+  from {
     transform: rotateY(0);
   }
-  45% {
-    transform: translateZ(14px) rotateY(80deg);
-  }
-  100% {
+  to {
     transform: rotateY(180deg);
   }
 }
@@ -332,11 +427,25 @@
   0%,
   100% {
     background: #0000;
-    box-shadow: 0 0 0 #0000;
   }
   50% {
     background: #0002;
-    box-shadow: 0 8px 24px #0006;
+  }
+}
+@keyframes print-mobile-next {
+  from {
+    transform: translateX(12px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes print-mobile-previous {
+  from {
+    transform: translateX(-12px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 @media (max-width: 900px) {
@@ -404,9 +513,6 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .book-stage {
-    max-height: 68dvh;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   .book-leaf,
@@ -415,18 +521,97 @@
   }
 }
 
-.book-rest {
+/* Section 04: two primary publications, equal newspaper scale, related spread previews. */
+.print-editorial-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 36px 4%;
+}
+.print-editorial-grid .print-item:nth-child(n) {
+  margin: 0;
+  align-self: start;
+  justify-self: stretch;
+  width: 100%;
+}
+.print-editorial-grid [data-project="mercedes"],
+.print-editorial-grid [data-project="aviaprom"] {
+  grid-column: span 6;
+}
+.print-editorial-grid .print-item-images {
+  display: block;
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+.print-editorial-grid .print-item-images img {
   position: absolute;
-  top: 0;
-  width: 50%;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  z-index: 1;
-  background: #111110;
-  pointer-events: none;
+  object-fit: contain;
 }
-.rest-left {
-  left: 0;
+.print-editorial-grid [data-project^="newspaper"] {
+  grid-column: span 6;
 }
-.rest-right {
-  left: 50%;
+.print-editorial-grid [data-project^="newspaper"] .print-open {
+  max-width: 300px;
+  margin: auto;
+}
+.print-editorial-grid [data-project^="newspaper"] .print-item-images {
+  aspect-ratio: 1 / 1.414;
+  max-height: 330px;
+}
+.print-editorial-grid [data-project^="newspaper"] figcaption {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.print-editorial-grid [data-project^="spread"] {
+  grid-column: span 4;
+}
+.print-editorial-grid [data-project^="spread"] .print-item-images {
+  aspect-ratio: 1.6;
+}
+/* Static section 04 artwork gets the full dialog width, including both independent spreads in PDF 5. */
+.editorial-modal .print-preview-pages {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (max-width: 900px) and (min-width: 651px) {
+  .print-editorial-grid [data-project^="newspaper"] .print-open,
+  .print-editorial-grid [data-project^="newspaper"] figcaption {
+    max-width: 220px;
+  }
+  .print-editorial-grid [data-project^="spread"] {
+    grid-column: span 6;
+  }
+  .print-editorial-grid [data-project="spread-3"] {
+    grid-column: 4 / span 6;
+  }
+}
+@media (max-width: 650px) {
+  .publication-modal .print-lightbox-content {
+    grid-template-rows: 60px minmax(0, 1fr);
+  }
+  .print-editorial-grid {
+    display: flex;
+    gap: 30px;
+  }
+  .print-editorial-grid [data-project^="newspaper"] .print-open,
+  .print-editorial-grid [data-project^="newspaper"] figcaption {
+    max-width: 280px;
+  }
+  .print-editorial-grid [data-project^="spread"] .print-item-images {
+    aspect-ratio: 1.6;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-next,
+  .mobile-previous {
+    animation: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .print-lightbox.publication-modal {
+    height: min(94dvh, calc((100vw - 42px) / var(--page-ratio) + 172px));
+  }
 }

@@ -113,7 +113,7 @@ for (const width of [390, 1440])
           ? Array.from({ length: count }, (_, i) => [i + 1])
           : id === "mercedes"
             ? [[1], [2, 3], [4, 5], [6, 7], [8]]
-            : [[1], [2, 3]];
+            : [[1], [2], [3]];
       for (let i = 0; i < frames.length; i++) {
         await expect
           .poll(() =>
