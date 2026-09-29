@@ -35,7 +35,12 @@ for (const width of [390, 768, 1440])
           ? [[1], [2], [3]]
           : width <= 650
             ? [[1], [2], [3], [4], [5], [6], [7], [8]]
-            : [[1], [2, 3], [4, 5], [6, 7], [8]];
+            : [
+                [2, 1],
+                [4, 3],
+                [6, 5],
+                [8, 7],
+              ];
       for (let i = 0; i < states.length; i++) {
         await expect
           .poll(() =>
@@ -135,7 +140,7 @@ test("equal preview scale within tiers and complete static section 04 modals", a
   for (const ids of [
     ["mercedes", "aviaprom"],
     ["newspaper-1", "newspaper-2"],
-    ["spread-1", "spread-2", "spread-3"],
+    ["spread-2", "spread-3"],
   ]) {
     const boxes = [];
     for (const id of ids)

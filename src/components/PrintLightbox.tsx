@@ -8,6 +8,7 @@ export type PrintPreview = {
   book?: boolean;
   structure?: PublicationStructure;
   editorial?: boolean;
+  hideGroupCaptions?: boolean;
   trigger: HTMLElement;
 };
 export default function PrintLightbox(props: {
@@ -85,9 +86,10 @@ export default function PrintLightbox(props: {
                       )}
                     </For>
                   </div>
-                  {props.preview.groups.length > 1 && (
-                    <figcaption>{group.label}</figcaption>
-                  )}
+                  {!props.preview.hideGroupCaptions &&
+                    props.preview.groups.length > 1 && (
+                      <figcaption>{group.label}</figcaption>
+                    )}
                 </figure>
               )}
             </For>

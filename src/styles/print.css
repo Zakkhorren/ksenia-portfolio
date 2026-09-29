@@ -615,3 +615,116 @@
     height: min(94dvh, calc((100vw - 42px) / var(--page-ratio) + 172px));
   }
 }
+
+/* Correction pass: consistent complete previews, one visible materials project. */
+.print-business-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4%;
+}
+.print-business-grid .print-item:nth-child(n),
+.print-posters-grid .print-item:nth-child(n) {
+  margin: 0;
+}
+.print-business-grid .print-item-images,
+.print-posters-grid .print-item-images {
+  position: relative;
+  display: block;
+}
+.print-business-grid .print-item-images {
+  aspect-ratio: 9 / 10;
+}
+.print-posters-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3%;
+}
+.print-posters-grid .print-item-images {
+  aspect-ratio: 0.684;
+}
+.print-business-grid .print-item-images img,
+.print-posters-grid .print-item-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.print-materials-grid {
+  display: block;
+  width: min(100%, 760px);
+}
+
+/* The secondary row follows the actual portrait + portrait + landscape ratios. */
+.print-secondary {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 36px;
+  min-width: 0;
+}
+.print-secondary-top {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7073fr) minmax(0, 0.7073fr) minmax(
+      0,
+      1.7943fr
+    );
+  gap: 28px;
+  align-items: start;
+}
+.print-secondary-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4%;
+  align-items: start;
+}
+.print-editorial-grid .print-secondary .print-item:nth-child(n) {
+  grid-column: auto;
+  justify-self: stretch;
+  width: 100%;
+  margin: 0;
+}
+.print-editorial-grid .print-secondary .print-open,
+.print-editorial-grid .print-secondary figcaption {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.print-editorial-grid .print-secondary .print-item-images {
+  aspect-ratio: var(--print-image-ratio);
+  max-height: none;
+}
+.print-editorial-grid .print-secondary-bottom .print-item-images {
+  aspect-ratio: 1.51;
+}
+@media (max-width: 900px) and (min-width: 651px) {
+  .print-posters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 4%;
+  }
+  .print-secondary-top {
+    gap: 18px;
+  }
+  .print-secondary-top figcaption {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+@media (max-width: 650px) {
+  .print-business-grid,
+  .print-posters-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .print-secondary {
+    width: 100%;
+    gap: 30px;
+  }
+  .print-secondary-top,
+  .print-secondary-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .print-editorial-grid .print-secondary .print-item-images {
+    aspect-ratio: var(--print-image-ratio);
+  }
+}

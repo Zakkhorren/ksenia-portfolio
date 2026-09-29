@@ -3,7 +3,8 @@ import { asset } from "../lib/paths";
 import type { PrintPage } from "../lib/print-assets";
 
 type Frame = { slots: (number | null)[]; spread?: number };
-export type PublicationStructure = "pages" | "single-spread-single";
+export type PublicationStructure =
+  "pages" | "single-spread-single" | "reversed-pairs";
 export function publicationFrames(
   count: number,
   structure: PublicationStructure,
@@ -11,6 +12,10 @@ export function publicationFrames(
 ): Frame[] {
   if (mobile)
     return Array.from({ length: count }, (_, i) => ({ slots: [i + 1] }));
+  if (structure === "reversed-pairs")
+    return Array.from({ length: Math.ceil(count / 2) }, (_, i) => ({
+      slots: [i * 2 + 2 <= count ? i * 2 + 2 : null, i * 2 + 1],
+    }));
   if (structure === "single-spread-single")
     return [
       { slots: [null, 1] },
@@ -239,7 +244,10 @@ export default function Publication(props: {
           ←
         </button>
         <span class="book-position" aria-live="polite">
-          {sources(frames()[index()]).join("–")} / {props.pages.length}
+          {sources(frames()[index()]).join(
+            structure === "reversed-pairs" && !mobile() ? " | " : "–",
+          )}{" "}
+          / {props.pages.length}
         </span>
         <button
           type="button"

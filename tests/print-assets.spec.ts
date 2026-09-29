@@ -45,7 +45,7 @@ test("print inventory, static images and lightbox lifecycle", async ({
   for (const [section, count] of [
     ["business", 2],
     ["posters", 4],
-    ["materials", 6],
+    ["materials", 1],
     ["editorial", 7],
   ] as const)
     await expect(page.locator(`.print-${section} .print-item`)).toHaveCount(
@@ -60,8 +60,8 @@ test("print inventory, static images and lightbox lifecycle", async ({
     ["postcards", 6],
     ["newspaper-1", 1],
     ["newspaper-2", 1],
-    ["spread-1", 2],
-    ["spread-2", 1],
+    ["spread-1", 1],
+    ["spread-2", 2],
     ["spread-3", 1],
   ] as const) {
     const opener = page.locator(`[data-project="${id}"] button`);
@@ -74,11 +74,7 @@ test("print inventory, static images and lightbox lifecycle", async ({
       "hidden",
     );
     if (id === "postcards") {
-      await expect(dialog.locator("figcaption")).toHaveText([
-        "Гора",
-        "Лес",
-        "Город",
-      ]);
+      await expect(dialog.locator("figcaption")).toHaveCount(0);
       await expect(dialog.locator(".print-preview-group")).toHaveCount(3);
     }
     await dialog.locator("img").evaluateAll(async (imgs) => {
@@ -112,7 +108,12 @@ for (const width of [390, 1440])
         width < 650
           ? Array.from({ length: count }, (_, i) => [i + 1])
           : id === "mercedes"
-            ? [[1], [2, 3], [4, 5], [6, 7], [8]]
+            ? [
+                [2, 1],
+                [4, 3],
+                [6, 5],
+                [8, 7],
+              ]
             : [[1], [2], [3]];
       for (let i = 0; i < frames.length; i++) {
         await expect
@@ -154,7 +155,7 @@ for (const width of [390, 1440])
       await page.keyboard.press("Escape");
     }
   });
-test("page turn uses a physical double-sided leaf and retains blank edges", async ({
+test("page turn uses a physical double-sided leaf and starts with page 2 on the left", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 960 });
@@ -162,7 +163,7 @@ test("page turn uses a physical double-sided leaf and retains blank edges", asyn
   await page.goto("work/layout/");
   await page.locator("[data-project=mercedes] button").click();
   await expect(
-    page.locator(".book-page").first().locator(".book-blank"),
+    page.locator(".book-page").first().locator('[data-page="2"]'),
   ).toHaveCount(1);
   await page.getByRole("button", { name: "Следующая страница" }).click();
   await expect(page.locator(".book-leaf.forward")).toBeVisible();

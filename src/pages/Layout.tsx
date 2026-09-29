@@ -55,7 +55,14 @@ function PrintItem(props: {
     </div>
   );
   return (
-    <figure class="print-item" data-source={props.file} data-project={props.id}>
+    <figure
+      class="print-item"
+      data-source={props.file}
+      data-project={props.id}
+      style={{
+        "--print-image-ratio": String(pages[0].width / pages[0].height),
+      }}
+    >
       {props.onOpen ? (
         <button
           class="print-open"
@@ -90,7 +97,12 @@ export default function Layout() {
         trigger,
         book,
         structure:
-          sources[0] === files.aviaprom ? "single-spread-single" : "pages",
+          sources[0] === files.aviaprom
+            ? "single-spread-single"
+            : sources[0] === files.mercedes
+              ? "reversed-pairs"
+              : "pages",
+        hideGroupCaptions: sources[0] === files.postcards[0],
         editorial: sources.some((file) =>
           [...files.newspapers, ...files.spreads].some(
             (source) => source === file,
@@ -153,22 +165,6 @@ export default function Layout() {
             english="PRINT MATERIALS"
           />
           <div class="print-materials-grid">
-            <For each={files.materials}>
-              {(file, i) => (
-                <PrintItem
-                  file={file}
-                  title={
-                    [
-                      "Лифлет / 01",
-                      "Лифлет / 02",
-                      "Сертификат",
-                      "Грамоты",
-                      "Листовка",
-                    ][i()]
-                  }
-                />
-              )}
-            </For>
             <PrintItem
               file={files.postcardsMockup}
               title="Береги природу / Открытки"
@@ -203,30 +199,46 @@ export default function Layout() {
               id="aviaprom"
               onOpen={open("Авиапром", [files.aviaprom], true)}
             />
-            <For each={files.newspapers}>
-              {(file, i) => (
+            <div class="print-secondary">
+              <div class="print-secondary-top">
+                <For each={files.newspapers}>
+                  {(file, i) => (
+                    <PrintItem
+                      file={file}
+                      title={
+                        i() === 0
+                          ? "Роснефть / Газетная полоса"
+                          : "Газетная полоса"
+                      }
+                      id={`newspaper-${i() + 1}`}
+                      onOpen={open(i() === 0 ? "Роснефть" : "Газетная полоса", [
+                        file,
+                      ])}
+                    />
+                  )}
+                </For>
                 <PrintItem
-                  file={file}
-                  title={
-                    i() === 0 ? "Роснефть / Газетная полоса" : "Газетная полоса"
-                  }
-                  id={`newspaper-${i() + 1}`}
-                  onOpen={open(i() === 0 ? "Роснефть" : "Газетная полоса", [
-                    file,
-                  ])}
+                  file={files.spreads[2]}
+                  title="Разворот / 01"
+                  id="spread-1"
+                  onOpen={open("Разворот / 01", [files.spreads[2]])}
                 />
-              )}
-            </For>
-            <For each={files.spreads}>
-              {(file, i) => (
+              </div>
+              <div class="print-secondary-bottom">
                 <PrintItem
-                  file={file}
-                  title={`Разворот / 0${i() + 1}`}
-                  id={`spread-${i() + 1}`}
-                  onOpen={open(`Разворот / 0${i() + 1}`, [file])}
+                  file={files.spreads[0]}
+                  title="Разворот / 02"
+                  id="spread-2"
+                  onOpen={open("Разворот / 02", [files.spreads[0]])}
                 />
-              )}
-            </For>
+                <PrintItem
+                  file={files.spreads[1]}
+                  title="Разворот / 03"
+                  id="spread-3"
+                  onOpen={open("Разворот / 03", [files.spreads[1]])}
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>
