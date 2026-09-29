@@ -147,7 +147,7 @@ test("five named home backgrounds load with shared cover and stay within viewpor
     "Логофолио",
     "Упаковка",
     "Маркетплейсы",
-    "Вёрстка",
+    "Полиграфия",
     "Эксперименты",
   ];
   for (const width of [320, 390, 768, 1440]) {

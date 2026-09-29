@@ -180,3 +180,8 @@
     margin: 14px 3% 8px auto;
   }
 }
+
+/* Keep the supplied Print composition on the right at every cover crop. */
+.home-page .category-row.layout.supplied-background {
+  background-position: right center;
+}

@@ -4,6 +4,7 @@ import PrintLightbox, { type PrintPreview } from "../components/PrintLightbox";
 import {
   printFiles as files,
   printPages,
+  mercedesPages,
   type PrintFile,
 } from "../lib/print-assets";
 import { asset } from "../lib/paths";
@@ -100,7 +101,7 @@ export default function Layout() {
           sources[0] === files.aviaprom
             ? "single-spread-single"
             : sources[0] === files.mercedes
-              ? "reversed-pairs"
+              ? "bound-publication"
               : "pages",
         hideGroupCaptions: sources[0] === files.postcards[0],
         editorial: sources.some((file) =>
@@ -110,7 +111,7 @@ export default function Layout() {
         ),
         groups: sources.map((file, i) => ({
           label: labels?.[i] || title,
-          pages: printPages(file),
+          pages: file === files.mercedes ? mercedesPages() : printPages(file),
         })),
       });
   return (

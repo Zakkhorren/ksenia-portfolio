@@ -99,7 +99,7 @@ for (const width of [390, 1440])
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("work/layout/");
     for (const [id, count] of [
-      ["mercedes", 8],
+      ["mercedes", 10],
       ["aviaprom", 3],
     ] as const) {
       await page.locator(`[data-project=${id}] button`).click();
@@ -108,12 +108,7 @@ for (const width of [390, 1440])
         width < 650
           ? Array.from({ length: count }, (_, i) => [i + 1])
           : id === "mercedes"
-            ? [
-                [2, 1],
-                [4, 3],
-                [6, 5],
-                [8, 7],
-              ]
+            ? [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]
             : [[1], [2], [3]];
       for (let i = 0; i < frames.length; i++) {
         await expect
@@ -155,7 +150,7 @@ for (const width of [390, 1440])
       await page.keyboard.press("Escape");
     }
   });
-test("page turn uses a physical double-sided leaf and starts with page 2 on the left", async ({
+test("page turn uses a physical double-sided leaf and starts with an empty left slot", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 960 });
@@ -163,7 +158,7 @@ test("page turn uses a physical double-sided leaf and starts with page 2 on the 
   await page.goto("work/layout/");
   await page.locator("[data-project=mercedes] button").click();
   await expect(
-    page.locator(".book-page").first().locator('[data-page="2"]'),
+    page.locator(".book-page").first().locator(".book-blank"),
   ).toHaveCount(1);
   await page.getByRole("button", { name: "Следующая страница" }).click();
   await expect(page.locator(".book-leaf.forward")).toBeVisible();

@@ -34,13 +34,8 @@ for (const width of [390, 768, 1440])
         id === "aviaprom"
           ? [[1], [2], [3]]
           : width <= 650
-            ? [[1], [2], [3], [4], [5], [6], [7], [8]]
-            : [
-                [2, 1],
-                [4, 3],
-                [6, 5],
-                [8, 7],
-              ];
+            ? [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]]
+            : [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10]];
       for (let i = 0; i < states.length; i++) {
         await expect
           .poll(() =>
@@ -67,7 +62,7 @@ for (const width of [390, 768, 1440])
               page
                 .locator(".book-page")
                 .first()
-                .locator(`[data-page="${id === "aviaprom" ? 3 : 8}"]`),
+                .locator(`[data-page="${id === "aviaprom" ? 3 : 10}"]`),
             ).toHaveCount(1);
           if (id === "aviaprom" && i === 1) {
             const spread = await page

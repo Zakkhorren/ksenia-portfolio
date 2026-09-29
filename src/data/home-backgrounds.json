@@ -21,11 +21,11 @@
     "sourceSha256": "1cc00cf19d21f5021bc94d77cf3c50484a6bd04f6d29f6ad13e6fc774e6ac221"
   },
   "layout": {
-    "file": "home-backgrounds/на главную_Вёрстка.jpg",
-    "width": 2560,
-    "height": 900,
-    "sha256": "8cd7825d848c1e5ccf1bd97eb90a69eaa1da60d63f89b7d8ec4b702aa3e05fe5",
-    "sourceSha256": "02937c72ca3b3c70b78dbab0771450d9cb4b0bcc74a53fe8195851017789b2bb"
+    "file": "home-backgrounds/на главную_Полиграфия.jpg",
+    "width": 10667,
+    "height": 3750,
+    "sha256": "482eceb6ba4623db2db08f2941f9776ad699a35333aa7d2beb1d962b5d9586ee",
+    "sourceSha256": "482eceb6ba4623db2db08f2941f9776ad699a35333aa7d2beb1d962b5d9586ee"
   },
   "experiments": {
     "file": "home-backgrounds/на главную_Эксперименты.jpg",

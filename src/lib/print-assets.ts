@@ -6,6 +6,7 @@ export type PrintPage = {
   width: number;
   height: number;
   page: number;
+  label?: string;
 };
 export const printPages = (name: PrintFile): PrintPage[] =>
   manifest[name].pages;
@@ -42,3 +43,16 @@ export const printFiles = {
     "7. Рандомный блок разворотом.pdf",
   ],
 } as const satisfies Record<string, PrintFile | readonly PrintFile[]>;
+
+/** Physical reading order: front cover, eight internal pages, back cover. */
+export const mercedesPages = (): PrintPage[] => {
+  const covers = printPages(printFiles.mercedesCover);
+  return [
+    { ...covers[0], label: "Каталог Mercedes-Benz — лицевая обложка" },
+    ...printPages(printFiles.mercedes).map((page, i) => ({
+      ...page,
+      label: `Каталог Mercedes-Benz — внутренняя страница ${i + 1}`,
+    })),
+    { ...covers[1], label: "Каталог Mercedes-Benz — задняя обложка" },
+  ];
+};
