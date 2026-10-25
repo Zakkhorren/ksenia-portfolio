@@ -4,6 +4,23 @@ import { CollectionHeader, EndNavigation } from "../components/Shared";
 import { asset } from "../lib/paths";
 import { openLogo } from "../lib/viewer-state";
 import { ru } from "../lib/typography";
+// Optical corrections apply only to the collection artwork, never the viewer.
+const galleryScale: Record<string, number> = {
+  "vorotila-pro": 0.82,
+  perm: 0.8,
+  whisper: 0.94,
+  tea: 0.96,
+  peptide: 0.8,
+  evia: 0.72,
+  arbo: 0.74,
+  star: 0.94,
+  product: 0.82,
+  matreshka: 0.8,
+  nest: 0.82,
+  shark: 1.12,
+  cream: 0.74,
+  shine: 0.94,
+};
 export default function Logofolio() {
   const rows = Array.from({ length: Math.ceil(logos.length / 2) }, (_, index) =>
     logos.slice(index * 2, index * 2 + 2),
@@ -52,7 +69,10 @@ export default function Logofolio() {
                         openLogo(logos.indexOf(project), event.currentTarget)
                       }
                     >
-                      <span class={`logo-artwork logo-shape-${shape}`}>
+                      <span
+                        class={`logo-artwork logo-shape-${shape}`}
+                        style={{ "--logo-ratio": ratio, "--logo-scale": galleryScale[project.id] ?? 1 }}
+                      >
                         <svg
                           class="logo-art logo-monochrome"
                           viewBox={`${x - pad} ${y - pad} ${width + pad * 2} ${height + pad * 2}`}

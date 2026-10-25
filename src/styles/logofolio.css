@@ -1,13 +1,13 @@
 /* Logofolio grid: equal columns, intrinsic artwork, shared text tracks. */
 .logo-color-defs{position:absolute;pointer-events:none}
 .logo-field{padding:40px 0 70px;display:grid;gap:62px}
-.logo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,auto);column-gap:32px}
+.logo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,auto);column-gap:32px;container-type:inline-size;--logo-column-width:calc((100cqw - 32px) / 2)}
 .logo-project{display:grid;grid-row:span 4;grid-template-rows:subgrid;min-width:0;margin:0;padding:0;border:0;background:none;color:var(--fg);text-align:left;cursor:pointer;font:inherit}
 .logo-art{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
-.logo-artwork{display:flex;align-items:flex-end;justify-content:center;min-width:0;--logo-height:190px}
+.logo-artwork{display:flex;align-items:center;justify-content:center;min-width:0;min-height:min(var(--logo-height),calc(var(--logo-column-width) / var(--logo-ratio)));--logo-height:190px}
 .logo-shape-standard{--logo-height:175px}
 .logo-shape-tall{--logo-height:160px}
-.logo-artwork .logo-art{width:min(100%,calc(var(--logo-height) * var(--logo-ratio)));height:auto;max-height:var(--logo-height);transition:transform .2s ease}
+.logo-artwork .logo-art{width:min(calc(100% * var(--logo-scale)),calc(var(--logo-height) * var(--logo-ratio) * var(--logo-scale)));height:auto;max-height:calc(var(--logo-height) * var(--logo-scale));transition:transform .2s ease}
 .logo-monochrome{filter:url(#logo-cream)}
 .logo-caption{display:contents;font-size:.8125rem;line-height:1.5}
 .logo-caption-title{display:block;min-width:0;color:var(--fg);letter-spacing:.025em;margin-top:18px}
@@ -18,14 +18,14 @@
 .logo-project:focus-visible{outline:1px solid var(--muted);outline-offset:8px}
 @media(max-width:1000px){
  .logo-field{gap:48px}
- .logo-row{column-gap:24px}
+ .logo-row{column-gap:24px;--logo-column-width:calc((100cqw - 24px) / 2)}
  .logo-artwork{--logo-height:150px}
  .logo-shape-tall{--logo-height:125px}
  .logo-cue{font-size:.65rem}
 }
 @media(max-width:700px){
  .logo-field{padding-top:32px;padding-bottom:50px;gap:42px}
- .logo-row{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:42px}
+ .logo-row{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:42px;--logo-column-width:100cqw}
  .logo-project{grid-column:auto;grid-row:auto;grid-template-rows:auto auto auto auto}
  .logo-artwork{--logo-height:145px}
  .logo-shape-tall{--logo-height:125px}

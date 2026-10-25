@@ -13,6 +13,14 @@ for (const width of [390, 768, 1024, 1440]) {
       const box = await art.boundingBox();
       expect(box!.width).toBeGreaterThan(40);
       expect(box!.height).toBeGreaterThan(15);
+      const space = await art.evaluate(el => {
+        const r = el.getBoundingClientRect(), p = el.parentElement!.getBoundingClientRect();
+        return { left: r.left - p.left, right: p.right - r.right, top: r.top - p.top, bottom: p.bottom - r.bottom };
+      });
+      expect(Math.abs(space.left - space.right)).toBeLessThan(1);
+      expect(space.left).toBeGreaterThanOrEqual(0);
+      expect(space.top).toBeGreaterThanOrEqual(-1);
+      expect(space.bottom).toBeGreaterThanOrEqual(-1);
     }
     await expect(card.locator('.logo-caption-title')).toHaveText('ВОРОТИЛА ПРО / 2026');
     await expect(card.locator('.logo-caption-context')).toHaveText('Продажа и монтаж секционных ворот под ключ');
@@ -67,6 +75,7 @@ for (const width of [390, 768, 1024, 1440]) {
       expect(a.right <= b.left + 1 || b.right <= a.left + 1 || a.bottom <= b.top + 1 || b.bottom <= a.top + 1).toBe(true);
     }
     await page.screenshot({ path: `test-results/vorotila-grid-${width}.png`, fullPage: true });
+    await page.locator('.logo-field').screenshot({ path: `test-results/logofolio-gallery-${width}.png` });
     await card.click();
     const modal = page.locator('.logo-detail');
     await expect(modal).toBeVisible();
