@@ -72,43 +72,6 @@
 .home-page .project-placeholder .project-number span {
   background: currentColor;
 }
-/* Subgrid aligns the three text rows without changing artwork width or columns. */
-@media (min-width: 601px) {
-  .year-2023 {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-row: 7;
-    grid-template-columns: subgrid;
-    grid-template-rows: auto auto auto auto;
-    row-gap: 0;
-  }
-  .year-2023 .logo-project {
-    grid-row: 1 / 5;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: subgrid;
-    row-gap: 0;
-  }
-  .year-2023 .logo-caption {
-    display: contents;
-  }
-  .year-2023 .logo-caption-title {
-    grid-row: 2;
-    margin-top: 18px;
-    font-size: 0.8125rem;
-    line-height: 1.5;
-  }
-  .year-2023 .logo-caption-context {
-    grid-row: 3;
-    font-size: 0.8125rem;
-    line-height: 1.5;
-  }
-  .year-2023 .logo-cue {
-    grid-column: 1;
-    grid-row: 4;
-    margin: 10px 0 0;
-  }
-}
-
 .case-page-header .page-title-line > div {
   width: 100%;
   min-width: 0;

@@ -63,27 +63,6 @@
   filter: none;
 }
 
-/* Compact only the final row; maintain intrinsic artwork and common baselines. */
-@media (min-width: 601px) {
-  .logo-cream {
-    grid-column: 1 / 5;
-  }
-  .logo-shark {
-    grid-column: 6 / 8;
-  }
-  .logo-shine {
-    grid-column: 9 / 13;
-  }
-  .logo-shark {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .logo-shark .logo-cue {
-    grid-column: 1;
-    grid-row: 3;
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-}
 /* Three navigation items fit without reducing the approved mobile type size. */
 @media (max-width: 600px) {
   .site-header .brand-description,

@@ -2,10 +2,10 @@ import { expect, test } from '@playwright/test';
 import logos from '../src/data/logofolio.json' with { type: 'json' };
 import sharp from 'sharp';
 
-for (const width of [390, 768, 1440]) {
+for (const width of [390, 768, 1024, 1440]) {
   test(`Vorotila project at ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 960 });
-    await page.goto('work/logofolio/');
+    await page.goto(process.env.LOGOFOLIO_URL || 'work/logofolio/');
     const card = page.locator('.logo-project').first();
     await expect(card).toHaveAttribute('data-logo', 'vorotila-pro');
     await expect(page.locator('.logo-project')).toHaveCount(logos.length);
@@ -47,11 +47,14 @@ for (const width of [390, 768, 1440]) {
         const geometry = await row.evaluate(el => {
           const cards = [...el.children].map(c => c.getBoundingClientRect());
           const r = el.getBoundingClientRect();
-          return { left: cards[0].left - r.left, right: r.right - cards[1].right, firstTop: cards[0].top, secondTop: cards[1].top };
+          return { left: cards[0].left - r.left, right: r.right - cards[1].right, firstTop: cards[0].top, secondTop: cards[1].top, widthDifference: cards[0].width - cards[1].width,
+            tracks: ['.logo-artwork', '.logo-caption-title', '.logo-caption-context', '.logo-cue'].map(selector => [...el.querySelectorAll(selector)].map(child => { const b = child.getBoundingClientRect(); return selector === '.logo-artwork' ? b.bottom : b.top; })) };
         });
         expect(Math.abs(geometry.left)).toBeLessThan(1);
         expect(Math.abs(geometry.right)).toBeLessThan(1);
         expect(geometry.firstTop).toBe(geometry.secondTop);
+        expect(Math.abs(geometry.widthDifference)).toBeLessThan(1);
+        for (const track of geometry.tracks) expect(Math.abs(track[0] - track[1])).toBeLessThan(1);
       }
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
