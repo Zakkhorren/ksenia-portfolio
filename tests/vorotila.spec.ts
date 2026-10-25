@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import logos from '../src/data/logofolio.json' with { type: 'json' };
+import sharp from 'sharp';
 
 for (const width of [390, 768, 1440]) {
   test(`Vorotila project at ${width}`, async ({ page }) => {
@@ -8,9 +9,51 @@ for (const width of [390, 768, 1440]) {
     const card = page.locator('.logo-project').first();
     await expect(card).toHaveAttribute('data-logo', 'vorotila-pro');
     await expect(page.locator('.logo-project')).toHaveCount(logos.length);
+    for (const art of await page.locator('.logo-artwork .logo-art').all()) {
+      const box = await art.boundingBox();
+      expect(box!.width).toBeGreaterThan(40);
+      expect(box!.height).toBeGreaterThan(15);
+    }
     await expect(card.locator('.logo-caption-title')).toHaveText('ВОРОТИЛА ПРО / 2026');
     await expect(card.locator('.logo-caption-context')).toHaveText('Продажа и монтаж секционных ворот под ключ');
     await expect(card.locator('.logo-cue')).toHaveText('СМОТРЕТЬ →');
+    await page.mouse.move(0, 0);
+    const colors = [];
+    for (const id of ['vorotila-pro', 'perm']) {
+      const art = page.locator(`[data-logo="${id}"] .logo-monochrome`);
+      const style = await art.evaluate(el => {
+        const s = getComputedStyle(el);
+        return { filter: s.filter, opacity: s.opacity, mask: s.maskImage, fill: s.fill };
+      });
+      expect(style.filter).toContain('#logo-cream');
+      expect(style.opacity).toBe('1');
+      expect(style.mask).toBe('none');
+      const { data, info } = await sharp(await art.screenshot()).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+      const histogram = new Map<string, number>();
+      for (let i = 0; i < data.length; i += info.channels) {
+        const rgb = [...data.subarray(i, i + 3)].join(',');
+        if (data[i] > 100) histogram.set(rgb, (histogram.get(rgb) || 0) + 1);
+      }
+      const dominant = [...histogram.entries()].sort((a, b) => b[1] - a[1])[0][0];
+      expect(dominant).toBe('236,232,223');
+      colors.push(style);
+    }
+    expect(colors[0]).toEqual(colors[1]);
+    await expect(page.locator('.logo-project')).toHaveCount(logos.length);
+    expect(await page.locator('.logo-project').evaluateAll(items => items.map(el => el.getAttribute('data-logo')))).toEqual(logos.map(p => p.id));
+    if (width > 600) {
+      for (const row of await page.locator('.logo-row').all()) {
+        await expect(row.locator('.logo-project')).toHaveCount(2);
+        const geometry = await row.evaluate(el => {
+          const cards = [...el.children].map(c => c.getBoundingClientRect());
+          const r = el.getBoundingClientRect();
+          return { left: cards[0].left - r.left, right: r.right - cards[1].right, firstTop: cards[0].top, secondTop: cards[1].top };
+        });
+        expect(Math.abs(geometry.left)).toBeLessThan(1);
+        expect(Math.abs(geometry.right)).toBeLessThan(1);
+        expect(geometry.firstTop).toBe(geometry.secondTop);
+      }
+    }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const boxes = await page.locator('.logo-project').evaluateAll(items => items.map(el => {
       const r = el.getBoundingClientRect();
@@ -43,5 +86,12 @@ for (const width of [390, 768, 1440]) {
     await card.click();
     await page.locator('.logo-detail-close').click();
     await expect(modal).toHaveCount(0);
+    for (const project of logos) {
+      const trigger = page.locator(`[data-logo="${project.id}"]`);
+      await trigger.click();
+      await expect(page.locator('#logo-detail-title')).toHaveText(`${project.name} / ${project.year}`);
+      await page.keyboard.press('Escape');
+      await expect(trigger).toBeFocused();
+    }
   });
 }

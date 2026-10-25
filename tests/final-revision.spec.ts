@@ -60,7 +60,7 @@ for (const width of [320, 390, 600, 768, 1024, 1440, 1920])
         ).toBeLessThan(1.1);
       if (slug === "logofolio" && width > 600) {
         const rows = await page
-          .locator(".year-2023 .logo-project")
+          .locator(".logo-row:last-child .logo-project")
           .evaluateAll((nodes) =>
             nodes.map((el) =>
               [
@@ -76,7 +76,7 @@ for (const width of [320, 390, 600, 768, 1024, 1440, 1920])
               Math.min(...rows.map((x) => x[r])),
           ).toBeLessThan(1);
         const sizes = await page
-          .locator(".year-2023 .logo-project")
+          .locator(".logo-row:nth-last-child(-n + 2) .logo-project")
           .evaluateAll((nodes) =>
             nodes.map((n) => ({
               shark: n.classList.contains("logo-shark"),

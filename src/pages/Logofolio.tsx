@@ -5,6 +5,9 @@ import { asset } from "../lib/paths";
 import { openLogo } from "../lib/viewer-state";
 import { ru } from "../lib/typography";
 export default function Logofolio() {
+  const rows = Array.from({ length: Math.ceil(logos.length / 2) }, (_, index) =>
+    logos.slice(index * 2, index * 2 + 2),
+  );
   return (
     <>
       <CollectionHeader slug="logofolio" />
@@ -19,14 +22,15 @@ export default function Logofolio() {
         </defs>
       </svg>
       <div class="logo-field">
-        <For each={[2026, 2025, 2024, 2023]}>
-          {(year) => (
+        <For each={rows}>
+          {(row, rowIndex) => (
             <section
-              class={`logo-chapter year-${year}`}
-              aria-label={`Логотипы ${year}`}
+              class="logo-row"
+              aria-label={`Логотипы: ряд ${rowIndex() + 1}`}
             >
-              <For each={logos.filter((p) => p.year === year)}>
+              <For each={row}>
                 {(project) => {
+                  const year = project.year;
                   const cover = project.assets[0];
                   const [x, y, width, height] = cover.artwork_bounds || [
                     0,
