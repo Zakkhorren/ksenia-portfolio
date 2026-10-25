@@ -301,7 +301,7 @@ function LogoViewer(props: {
   const count = () => `${pad(index() + 1)} / ${pad(logos.length)}`;
   return (
     <Dialog
-      class="logo-detail"
+      class={`logo-detail logo-detail-${project().id}`}
       label="logo-detail-title"
       request={props.request}
       onNavigate={navigate}

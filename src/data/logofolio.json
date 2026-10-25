@@ -1,5 +1,40 @@
 [
   {
+    "id": "vorotila-pro",
+    "name": "ВОРОТИЛА ПРО",
+    "year": 2026,
+    "context": "Продажа и монтаж секционных ворот под ключ",
+    "cream": false,
+    "assets": [
+      {
+        "file": "vorotila-pro.svg",
+        "source": "+Логотип_основной вариант.svg",
+        "width": 450.71,
+        "height": 155.91,
+        "artwork_bounds": [
+          21.26,
+          21.26,
+          408.19,
+          113.39
+        ],
+        "sha256": "62e3e28517a0a92cdb94d5ec2ece4d870d1155c7b27421fa71b24b040750fa90"
+      },
+      {
+        "file": "vorotila-pro-icon.svg",
+        "source": "+Иконка.svg",
+        "width": 155.91,
+        "height": 155.91,
+        "artwork_bounds": [
+          27.25,
+          43.51,
+          101.4,
+          68.88
+        ],
+        "sha256": "188353b33fec688e55fc0c622c9a06bf21f6b6abf76eb0664b572c3a0ab5a868"
+      }
+    ]
+  },
+  {
     "id": "perm",
     "name": "PERM POKER CLUB",
     "year": 2026,

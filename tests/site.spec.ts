@@ -151,7 +151,7 @@ test("logo viewer preserves variants and changes projects", async ({
   page,
 }) => {
   await page.goto("work/logofolio/");
-  const open = page.locator(".logo-project").first();
+  const open = page.locator('.logo-project[data-logo="perm"]');
   await open.click();
   await expect(page.locator(".logo-detail")).toBeVisible();
   await expect(page.locator("#logo-detail-title")).toContainText(
