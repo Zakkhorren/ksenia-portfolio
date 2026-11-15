@@ -11,6 +11,8 @@ export type PrintPage = {
 export const printPages = (name: PrintFile): PrintPage[] =>
   manifest[name].pages;
 export const printFiles = {
+  ulyanaMockup: "превью визитка.pdf",
+  ulyana: "визитка для портфолио.pdf",
   expressoMockup: "визитки expresso мокап.pdf",
   expresso: "Expresso визитка.pdf",
   fashionMockup: "визитки fashionlab мокап.pdf",

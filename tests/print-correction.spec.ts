@@ -20,13 +20,16 @@ for (const width of [390, 768, 1440])
       }
       if (width > 900) {
         for (const r of rects) {
-          expect(r.y).toBe(rects[0].y);
-          expect(Math.abs(r.bottom - rects[0].bottom)).toBeLessThan(0.5);
+          const row = rects.find((other) => Math.abs(other.y - r.y) < 1)!;
+          expect(Math.abs(r.bottom - row.bottom)).toBeLessThan(0.5);
         }
         const captions = await page
           .locator(`.print-${section} figcaption`)
           .evaluateAll((ns) => ns.map((n) => n.getBoundingClientRect().top));
-        expect(Math.max(...captions) - Math.min(...captions)).toBeLessThan(0.5);
+        for (let i = 0; i < captions.length; i++) {
+          const firstInRow = rects.findIndex((r) => Math.abs(r.y - rects[i].y) < 1);
+          expect(Math.abs(captions[i] - captions[firstInRow])).toBeLessThan(0.5);
+        }
       }
       expect(
         await images

@@ -448,5 +448,38 @@
         "page": 1
       }
     ]
+  },
+  "превью визитка.pdf": {
+    "source": "превью визитка.pdf",
+    "sha256": "0ed547768401418ec1f77b176778c8eed6617b2b063b8fee5af1bbb68a62fb48",
+    "pages": [
+      {
+        "file": "print/превью визитка.pdf/01.webp",
+        "preview": "print/превью визитка.pdf/01-preview.webp",
+        "width": 1800,
+        "height": 2000,
+        "page": 1
+      }
+    ]
+  },
+  "визитка для портфолио.pdf": {
+    "source": "визитка для портфолио.pdf",
+    "sha256": "ee3bd92ff3f9a81eccb764dbfd6cafcc585a9cbddfe641413a50e7b7e2a4e8a3",
+    "pages": [
+      {
+        "file": "print/визитка для портфолио.pdf/01.webp",
+        "preview": "print/визитка для портфолио.pdf/01-preview.webp",
+        "width": 2700,
+        "height": 1500,
+        "page": 1
+      },
+      {
+        "file": "print/визитка для портфолио.pdf/02.webp",
+        "preview": "print/визитка для портфолио.pdf/02-preview.webp",
+        "width": 2700,
+        "height": 1500,
+        "page": 2
+      }
+    ]
   }
 }

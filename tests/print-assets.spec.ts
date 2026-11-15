@@ -7,7 +7,7 @@ import { createHash } from "node:crypto";
 test("exact asset inventory and all rendered pages are served", async ({
   request,
 }) => {
-  expect(Object.keys(manifest)).toHaveLength(26);
+  expect(Object.keys(manifest)).toHaveLength(28);
   for (const [name, entry] of Object.entries(manifest)) {
     if (existsSync(`source-assets/print/${name}`))
       expect(
@@ -43,7 +43,7 @@ test("print inventory, static images and lightbox lifecycle", async ({
 }) => {
   await page.goto("work/layout/");
   for (const [section, count] of [
-    ["business", 2],
+    ["business", 3],
     ["posters", 4],
     ["materials", 1],
     ["editorial", 7],
@@ -55,6 +55,7 @@ test("print inventory, static images and lightbox lifecycle", async ({
   await expect(page.locator(".print-posters button")).toHaveCount(0);
   await expect(page.locator(".print-materials button")).toHaveCount(1);
   for (const [id, count] of [
+    ["ulyana-cards", 2],
     ["expresso-cards", 2],
     ["fashion-cards", 2],
     ["postcards", 6],

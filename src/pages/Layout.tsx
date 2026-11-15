@@ -118,13 +118,19 @@ export default function Layout() {
     <>
       <CollectionHeader slug="layout" />
       <div class="print-page">
-        <section class="print-section print-business" aria-label="01 / ВИЗИТКИ">
+        <section id="business-cards" class="print-section print-business" aria-label="01 / ВИЗИТКИ">
           <SectionHeading
             number="01"
             title="ВИЗИТКИ"
             english="BUSINESS CARDS"
           />
           <div class="print-business-grid">
+            <PrintItem
+              file={files.ulyanaMockup}
+              title="Ульяна Прокунина"
+              id="ulyana-cards"
+              onOpen={open("Ульяна Прокунина", [files.ulyana])}
+            />
             <PrintItem
               file={files.expressoMockup}
               title="Expresso"

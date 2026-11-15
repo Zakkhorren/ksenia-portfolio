@@ -619,7 +619,7 @@
 /* Correction pass: consistent complete previews, one visible materials project. */
 .print-business-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4%;
+  gap: 30px 4%;
 }
 .print-business-grid .print-item:nth-child(n),
 .print-posters-grid .print-item:nth-child(n) {
