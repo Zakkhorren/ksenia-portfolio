@@ -239,5 +239,16 @@
         }
       ]
     }
+  ],
+  "digitalProjects": [
+    {
+      "id": "wedding-invitation",
+      "title": "Свадебное приглашение",
+      "description": "Интерактивный сайт-приглашение",
+      "note": "Демонстрация с вымышленными данными",
+      "cover": "experiments/projects/wedding-cover.webp",
+      "preview": "experiments/projects/wedding-preview.webp",
+      "demoPath": "/demo/wedding/"
+    }
   ]
 }

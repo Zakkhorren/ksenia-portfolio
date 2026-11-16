@@ -46,3 +46,16 @@
 
 .desk-animation-grid button:focus-visible img{background-color:var(--body-text)}
 @media(hover:hover){.desk-animation-grid button:hover img{background-color:var(--body-text)}}
+
+/* Digital projects use the existing single content window. */
+.desk-project-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,280px));gap:24px}
+.desk-project-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:10px;border:1px solid var(--line);background:var(--bg);text-align:left}
+.desk-project-card:hover{border-color:var(--fg)}.desk-project-card img{width:100%;aspect-ratio:6/5;object-fit:contain;background:var(--surface)}
+.desk-project-card strong{font-size:20px;line-height:1.2;font-weight:500;margin-top:6px}.desk-project-card>span{font-size:14px;line-height:1.4;color:var(--muted)}
+.desk-project-detail{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(200px,1fr);gap:24px;align-items:start;min-width:0}
+.desk-project-preview{width:100%;height:auto;max-height:460px;object-fit:contain;background:var(--surface)}
+.desk-project-copy h2{font-size:26px;line-height:1.15;font-weight:600;letter-spacing:0;margin:0 0 15px}
+.desk-project-copy p{font-size:16px;line-height:1.5;margin:0 0 14px}.desk-project-copy .desk-project-note{font-size:13px;color:var(--muted)}
+.desk-demo-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--fg);color:var(--bg);padding:13px 16px;min-height:46px;font-size:14px;margin-top:12px}.desk-demo-link:hover{background:var(--red);color:var(--fg)}
+@media(max-width:1000px){.desk-project-detail{grid-template-columns:1fr}.desk-project-preview{max-height:340px}.desk-project-copy h2{font-size:24px}}
+@media(max-width:700px){.desk-project-list{grid-template-columns:minmax(0,280px)}.desk-project-detail{gap:20px}.desk-project-preview{max-height:300px}}

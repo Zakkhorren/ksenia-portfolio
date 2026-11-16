@@ -53,7 +53,7 @@ for (const width of [1440,1280,768,390]) test(`experiment desktop at ${width}px`
   await page.getByRole('button',{name:'Восстановить размер окна',exact:true}).click();
   if(width>700){const before=(await win.boundingBox())!;const bar=(await page.locator('.desk-titlebar').boundingBox())!;await page.mouse.move(bar.x+30,bar.y+20);await page.mouse.down();await page.mouse.move(d.x-200,d.y-200,{steps:6});await page.mouse.up();let moved=(await win.boundingBox())!;expect(moved.x).toBeGreaterThanOrEqual(d.x);expect(moved.y).toBeGreaterThanOrEqual(d.y);expect(moved.x).toBeLessThan(before.x);await page.setViewportSize({width:width-100,height:900});await page.waitForTimeout(50);const r=(await win.boundingBox())!;const desk=(await desktop.boundingBox())!;expect(r.x+r.width).toBeLessThanOrEqual(desk.x+desk.width);await page.setViewportSize({width,height:1100});}
   await page.keyboard.press('Escape');await expect(page.locator('.desk-grid button')).toHaveCount(20);await page.keyboard.press('Escape');await expect(page.locator('.desk-series')).toHaveCount(1);
-  await open('Сайты и приложения');await expect(page.locator('.desk-coming')).toHaveText('Скоро здесь появятсясайты и приложения');
+  await open('Сайты и приложения');await expect(page.locator('.desk-project-card')).toHaveCount(1);await expect(page.locator('.desk-project-card')).toContainText('Свадебное приглашение');
   await open('прочитай меня.txt');await expect(page.locator('.desk-readme')).toContainText('Без строгого брифа, зато с интересом.');
   await page.keyboard.press('Escape');await expect(win).toBeHidden();await expect(page.locator('.desk-task')).toHaveCount(0);
   await page.screenshot({path:`.qa/experiments/desktop-${width}.png`});
