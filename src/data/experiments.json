@@ -1,0 +1,243 @@
+{
+  "animations": [
+    {
+      "id": "morning",
+      "title": "Утренний",
+      "cover": "experiments/animation/morning-still.webp",
+      "src": "experiments/animation/morning.gif",
+      "width": 2048,
+      "height": 2048,
+      "frames": 4,
+      "original": "утренний.gif"
+    },
+    {
+      "id": "working",
+      "title": "Работающий",
+      "cover": "experiments/animation/working-still.webp",
+      "src": "experiments/animation/working.gif",
+      "width": 2048,
+      "height": 2048,
+      "frames": 2,
+      "original": "работающий.gif"
+    },
+    {
+      "id": "sleeping",
+      "title": "Спящий",
+      "cover": "experiments/animation/sleeping-still.webp",
+      "src": "experiments/animation/sleeping.gif",
+      "width": 2048,
+      "height": 2048,
+      "frames": 6,
+      "original": "спящий.gif"
+    }
+  ],
+  "series": [
+    {
+      "id": "china",
+      "title": "Китай",
+      "cover": "china-12",
+      "images": [
+        {
+          "id": "china-5",
+          "alt": "Красная подвеска на фоне двора",
+          "thumbnail": "experiments/china/5-thumb.webp",
+          "src": "experiments/china/5-view.webp",
+          "width": 965,
+          "height": 1280,
+          "original": "photo_5_2026-11-16_09-45-35.jpg",
+          "sha256": "a4aec3d1ca8b25968fc5511d253c921f9f15b4b20e7e54767c620126026d2012"
+        },
+        {
+          "id": "china-9",
+          "alt": "Красные подвески у окна",
+          "thumbnail": "experiments/china/9-thumb.webp",
+          "src": "experiments/china/9-view.webp",
+          "width": 969,
+          "height": 1280,
+          "original": "photo_9_2026-11-16_09-45-35.jpg",
+          "sha256": "a621c3e50e19d4f265a5a83d21f1cc3211b9dd7a05507a2a5277c12cd0240153"
+        },
+        {
+          "id": "china-7",
+          "alt": "Ряд разноцветных фонарей",
+          "thumbnail": "experiments/china/7-thumb.webp",
+          "src": "experiments/china/7-view.webp",
+          "width": 1280,
+          "height": 966,
+          "original": "photo_7_2026-11-16_09-45-35.jpg",
+          "sha256": "366087f1b1658ae0b88ffd881070582f4e72e2337160e8408017c82230184108"
+        },
+        {
+          "id": "china-11",
+          "alt": "Круглый резной потолок",
+          "thumbnail": "experiments/china/11-thumb.webp",
+          "src": "experiments/china/11-view.webp",
+          "width": 1280,
+          "height": 1280,
+          "original": "photo_11_2026-11-16_09-45-35.jpg",
+          "sha256": "2ed0f87d1c4d9bd80eebdd430ebf5e6f4a909a97ded0adfef22452ca8cd3153b"
+        },
+        {
+          "id": "china-4",
+          "alt": "Красные и золотые карпы в тёмной воде",
+          "thumbnail": "experiments/china/4-thumb.webp",
+          "src": "experiments/china/4-view.webp",
+          "width": 1280,
+          "height": 973,
+          "original": "photo_4_2026-11-16_09-45-35.jpg",
+          "sha256": "d2bfb05eeac044e2d3372a43992c5503d10d34c92fd886324b8d025ddbcd2612"
+        },
+        {
+          "id": "china-6",
+          "alt": "Уличный указатель среди деревьев",
+          "thumbnail": "experiments/china/6-thumb.webp",
+          "src": "experiments/china/6-view.webp",
+          "width": 976,
+          "height": 1280,
+          "original": "photo_6_2026-11-16_09-45-35.jpg",
+          "sha256": "9a0c77d1d696e8bed5078ed3ab0d69be4899902ea54c0902922d3fddacc28fd5"
+        },
+        {
+          "id": "china-3",
+          "alt": "Электрощиток и вьющееся растение",
+          "thumbnail": "experiments/china/3-thumb.webp",
+          "src": "experiments/china/3-view.webp",
+          "width": 978,
+          "height": 1280,
+          "original": "photo_3_2026-11-16_09-45-35.jpg",
+          "sha256": "a811bdbe2ac81dfa73bc1f18f20388cc4adf81efb5907e6c93084a6fb2f3db2a"
+        },
+        {
+          "id": "china-2",
+          "alt": "Красный фламинго в раковине",
+          "thumbnail": "experiments/china/2-thumb.webp",
+          "src": "experiments/china/2-view.webp",
+          "width": 969,
+          "height": 1280,
+          "original": "photo_2_2026-11-16_09-45-35.jpg",
+          "sha256": "b3aeb5f22a99d0eab6748a5554083b19411c5809ffa6253c759bdff59eaba0a1"
+        },
+        {
+          "id": "china-1",
+          "alt": "Человек с красным зонтом на переходе",
+          "thumbnail": "experiments/china/1-thumb.webp",
+          "src": "experiments/china/1-view.webp",
+          "width": 1280,
+          "height": 960,
+          "original": "photo_1_2026-11-16_09-45-35.jpg",
+          "sha256": "dbeed47df56d96495ec79f279e9456a934df90a1273a2da0e57e6abdb358988e"
+        },
+        {
+          "id": "china-20",
+          "alt": "Стена с металлическими банками",
+          "thumbnail": "experiments/china/20-thumb.webp",
+          "src": "experiments/china/20-view.webp",
+          "width": 1280,
+          "height": 972,
+          "original": "photo_20_2026-11-16_09-45-35.jpg",
+          "sha256": "32bc1e33a495e929d25aa5bcf3bd659b5c6859111fcb9ed6f5a1a6741c16ce5b"
+        },
+        {
+          "id": "china-18",
+          "alt": "Тенистый сад и павильон",
+          "thumbnail": "experiments/china/18-thumb.webp",
+          "src": "experiments/china/18-view.webp",
+          "width": 1280,
+          "height": 973,
+          "original": "photo_18_2026-11-16_09-45-35.jpg",
+          "sha256": "877501426850cd5bd94879dc78cd1f9f295d33ab8fba4d9e96b13bfcc8f23820"
+        },
+        {
+          "id": "china-15",
+          "alt": "Павильон у садового пруда",
+          "thumbnail": "experiments/china/15-thumb.webp",
+          "src": "experiments/china/15-view.webp",
+          "width": 1280,
+          "height": 969,
+          "original": "photo_15_2026-11-16_09-45-35.jpg",
+          "sha256": "a013bba46cd153eb107846ffe4d1dc5cf2cbe13cd544648a60f6be4f318da83f"
+        },
+        {
+          "id": "china-16",
+          "alt": "Каменная арка над водой",
+          "thumbnail": "experiments/china/16-thumb.webp",
+          "src": "experiments/china/16-view.webp",
+          "width": 964,
+          "height": 1280,
+          "original": "photo_16_2026-11-16_09-45-35.jpg",
+          "sha256": "3355c59af8c03a0bf0f4c7df807cf357ed48cb87d324d7e1f1d4d5e3aeebff14"
+        },
+        {
+          "id": "china-19",
+          "alt": "Канал под деревьями с красными фонарями",
+          "thumbnail": "experiments/china/19-thumb.webp",
+          "src": "experiments/china/19-view.webp",
+          "width": 1280,
+          "height": 976,
+          "original": "photo_19_2026-11-16_09-45-35.jpg",
+          "sha256": "cf1dbb2c7e03e53a3ff817a63eb90e03750534abb85ddfa0a3325f04e919f8c0"
+        },
+        {
+          "id": "china-14",
+          "alt": "Изогнутые крыши под деревьями",
+          "thumbnail": "experiments/china/14-thumb.webp",
+          "src": "experiments/china/14-view.webp",
+          "width": 974,
+          "height": 1280,
+          "original": "photo_14_2026-11-16_09-45-35.jpg",
+          "sha256": "35623297939dcd9bfa80420b54d5ac62bf0f7793ced499a829d04c5bf8da8f78"
+        },
+        {
+          "id": "china-17",
+          "alt": "Великая стена на горном хребте",
+          "thumbnail": "experiments/china/17-thumb.webp",
+          "src": "experiments/china/17-view.webp",
+          "width": 1280,
+          "height": 978,
+          "original": "photo_17_2026-11-16_09-45-35.jpg",
+          "sha256": "eb5d7f829f8db9e925f4d1aeb37e02c618fc7a36d5f160e9574a52b9aa9c0fe6"
+        },
+        {
+          "id": "china-13",
+          "alt": "Скалы среди деревьев",
+          "thumbnail": "experiments/china/13-thumb.webp",
+          "src": "experiments/china/13-view.webp",
+          "width": 970,
+          "height": 1280,
+          "original": "photo_13_2026-11-16_09-45-35.jpg",
+          "sha256": "bb7353192282d144b24e4297458ad229f376bbe09b7546d1ca5153508d58547b"
+        },
+        {
+          "id": "china-8",
+          "alt": "Красная архитектура на фоне леса",
+          "thumbnail": "experiments/china/8-thumb.webp",
+          "src": "experiments/china/8-view.webp",
+          "width": 1280,
+          "height": 1280,
+          "original": "photo_8_2026-11-16_09-45-35.jpg",
+          "sha256": "98c898b534661bf477066a2db9cee25f69969a28aa32249eff7a7385324cc5b9"
+        },
+        {
+          "id": "china-21",
+          "alt": "Башня над густыми деревьями",
+          "thumbnail": "experiments/china/21-thumb.webp",
+          "src": "experiments/china/21-view.webp",
+          "width": 973,
+          "height": 1280,
+          "original": "photo_21_2026-11-16_09-45-35.jpg",
+          "sha256": "bebc6979c02494cce5da9f2dd5ac3432e2f4100cdec91fccef8de780d9fef96b"
+        },
+        {
+          "id": "china-12",
+          "alt": "Высокая пагода на фоне леса и тумана",
+          "thumbnail": "experiments/china/12-thumb.webp",
+          "src": "experiments/china/12-view.webp",
+          "width": 969,
+          "height": 1280,
+          "original": "photo_12_2026-11-16_09-45-35.jpg",
+          "sha256": "00d73ea4ecc10c54140aba0998dc26c8ce49aecf4bdf4b6079bb6fe0a12b7d0b"
+        }
+      ]
+    }
+  ]
+}

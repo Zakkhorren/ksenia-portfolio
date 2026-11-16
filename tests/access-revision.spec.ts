@@ -1,4 +1,4 @@
-﻿import { test, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 for (const width of [390, 768, 1440])
   test(`case navigation, subtitles and years at ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 960 });
@@ -52,7 +52,7 @@ test("every UI link to unavailable collections opens notice without navigation",
     await page.locator("h1").waitFor();
     const initial = page.url();
     const links = page.locator(
-      'a[href*="/work/packaging/"],a[href*="/work/experiments/"]',
+      'a[href*="/work/packaging/"]',
     );
     for (let i = 0; i < (await links.count()); i++) {
       const link = links.nth(i);

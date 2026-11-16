@@ -3,7 +3,6 @@ import { routePath } from "../lib/paths";
 
 const unavailable = new Set([
   "/work/packaging/",
-  "/work/experiments/",
 ]);
 
 /** One capture handler covers cards, tabs and next-collection links. */
