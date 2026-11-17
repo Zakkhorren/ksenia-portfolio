@@ -36,6 +36,53 @@
     ],
     "brand": "HEALTH FORM"
   },
+  "market-lilac-skies": {
+    "title": "Real Techniques — Lilac Skies",
+    "images": [
+      {
+        "src": "/assets/marketplace/lilac-skies/01.webp",
+        "thumb": "/assets/marketplace/lilac-skies/01-thumb.webp",
+        "alt": "Lilac Skies — две кисти и упаковка",
+        "caption": "Lilac Skies — две кисти и упаковка"
+      },
+      {
+        "src": "/assets/marketplace/lilac-skies/02.webp",
+        "thumb": "/assets/marketplace/lilac-skies/02-thumb.webp",
+        "alt": "Сияние на скулах — применение RT454 и RT460",
+        "caption": "Сияние на скулах — применение RT454 и RT460"
+      },
+      {
+        "src": "/assets/marketplace/lilac-skies/03.webp",
+        "thumb": "/assets/marketplace/lilac-skies/03-thumb.webp",
+        "alt": "Контур и сияние — две кисти и свотчи",
+        "caption": "Контур и сияние — две кисти и свотчи"
+      },
+      {
+        "src": "/assets/marketplace/lilac-skies/04.webp",
+        "thumb": "/assets/marketplace/lilac-skies/04-thumb.webp",
+        "alt": "RT454 — мягкий контур",
+        "caption": "RT454 — мягкий контур"
+      },
+      {
+        "src": "/assets/marketplace/lilac-skies/05.webp",
+        "thumb": "/assets/marketplace/lilac-skies/05-thumb.webp",
+        "alt": "RT460 — точечное сияние",
+        "caption": "RT460 — точечное сияние"
+      }
+    ],
+    "description": "Серия из пяти карточек для набора двусторонних кистей Lilac Skies.",
+    "facts": {
+      "КОЛИЧЕСТВО КАРТОЧЕК": "5",
+      "ФОРМАТ": "3:4",
+      "КАТЕГОРИЯ": "КИСТИ ДЛЯ МАКИЯЖА"
+    },
+    "mode": "marketplace",
+    "preheading": "КАРТОЧКИ ТОВАРА",
+    "title_lines": [
+      "LILAC SKIES"
+    ],
+    "brand": "REAL TECHNIQUES"
+  },
   "layout-1": {
     "title": "Печатная графика",
     "images": [

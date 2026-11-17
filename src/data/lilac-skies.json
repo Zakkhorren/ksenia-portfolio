@@ -1,0 +1,57 @@
+{
+  "id": "market-lilac-skies",
+  "title": "Real Techniques — Lilac Skies",
+  "cover": "marketplace/lilac-skies/cover.webp",
+  "images": [
+    {
+      "id": "01",
+      "original": "Карточки кистей-01.png",
+      "sha256": "bd24c00016a9c4a3af20c095b49feda58f91ef8c3a9297853b7be86138912ad8",
+      "width": 5000,
+      "height": 6667,
+      "src": "/assets/marketplace/lilac-skies/01.webp",
+      "thumb": "/assets/marketplace/lilac-skies/01-thumb.webp",
+      "alt": "Lilac Skies — две кисти и упаковка"
+    },
+    {
+      "id": "02",
+      "original": "Карточки кистей-02.png",
+      "sha256": "f9149a94dc8de960765c73eefb3f9c09cfea3f7e9da3293574c5f3a83b7952aa",
+      "width": 5000,
+      "height": 6667,
+      "src": "/assets/marketplace/lilac-skies/02.webp",
+      "thumb": "/assets/marketplace/lilac-skies/02-thumb.webp",
+      "alt": "Сияние на скулах — применение RT454 и RT460"
+    },
+    {
+      "id": "03",
+      "original": "Карточки кистей-03.png",
+      "sha256": "47b99ef0bd4ea6bad28d49bf3d9f71e920fd3f41686166a3acc13bb035cbfbc6",
+      "width": 5000,
+      "height": 6667,
+      "src": "/assets/marketplace/lilac-skies/03.webp",
+      "thumb": "/assets/marketplace/lilac-skies/03-thumb.webp",
+      "alt": "Контур и сияние — две кисти и свотчи"
+    },
+    {
+      "id": "04",
+      "original": "Карточки кистей-04.png",
+      "sha256": "16c3ed6fef620abbdd50bcfe026c3b039b7777c3d2c595cded83a1ecee0823d1",
+      "width": 5000,
+      "height": 6667,
+      "src": "/assets/marketplace/lilac-skies/04.webp",
+      "thumb": "/assets/marketplace/lilac-skies/04-thumb.webp",
+      "alt": "RT454 — мягкий контур"
+    },
+    {
+      "id": "05",
+      "original": "Карточки кистей-05.png",
+      "sha256": "51fbf8281d9cc69f64765a5c935aca70bb6df2f2858ed9cf7d25000ca7da1fa7",
+      "width": 5000,
+      "height": 6667,
+      "src": "/assets/marketplace/lilac-skies/05.webp",
+      "thumb": "/assets/marketplace/lilac-skies/05-thumb.webp",
+      "alt": "RT460 — точечное сияние"
+    }
+  ]
+}

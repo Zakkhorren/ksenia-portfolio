@@ -120,7 +120,7 @@ test("marketplace gallery, keyboard, image cache and focus restoration", async (
   page,
 }) => {
   await page.goto("work/marketplace/");
-  const open = page.locator(".product-open");
+  const open = page.getByRole("button", { name: "Открыть: Магний цитрат + витамин B6", exact: true });
   await open.click();
   await expect(page.locator("dialog.viewer")).toBeVisible();
   await expect(page.locator(".viewer-main-image")).toHaveAttribute(
@@ -189,7 +189,7 @@ test("original SVG hashes are unchanged", async () => {
 test("mobile gallery swipe and complete thumbnails", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("work/marketplace/");
-  await page.locator(".product-open").click();
+  await page.getByRole("button", { name: "Открыть: Магний цитрат + витамин B6", exact: true }).click();
   await expect(page.locator(".viewer-main-image")).toBeVisible();
   await page.locator(".viewer-stage").evaluate((stage) => {
     for (const [type, x] of [

@@ -24,3 +24,6 @@
 @media(max-width:760px){.viewer[data-mode=marketplace] .viewer-shell{gap:12px;padding:40px 20px 20px}.viewer[data-mode=marketplace] .viewer-description{padding-top:10px}.viewer[data-mode=marketplace] .viewer-description h3{font-size:clamp(1rem,5vw,1.6rem)}.viewer[data-mode=marketplace] .viewer-stage{height:48dvh;min-height:180px}.viewer[data-mode=marketplace] .viewer-thumbs button{width:60px}}
 
 .viewer[data-mode=marketplace]{inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;height:auto}
+
+/* Keep the new 3:4 artwork whole inside the existing cover area. */
+.marketplace-supplied .lilac-cover{aspect-ratio:2917/3750;object-fit:contain}

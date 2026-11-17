@@ -1,5 +1,6 @@
 import { For } from "solid-js";
 import images from "../data/marketplace.json";
+import lilac from "../data/lilac-skies.json";
 import { CollectionHeader, EndNavigation } from "../components/Shared";
 import { asset } from "../lib/paths";
 import { openGallery } from "../lib/viewer-state";
@@ -78,9 +79,26 @@ export default function Marketplace() {
                   />
                 </div>
               )}
-              <div class="market-placeholder">
-                <CatalogImage file={file} alt="Место для будущего проекта" />
-              </div>
+              {index() === 0 ? (
+                <article class="product-listing" data-project="lilac-skies">
+                  <button
+                    class="product-open"
+                    type="button"
+                    aria-label={`Открыть: ${lilac.title}`}
+                    onClick={event => openGallery(lilac.id, 0, event.currentTarget)}
+                  >
+                    <img class="lilac-cover" src={asset(lilac.cover)} alt={lilac.images[0].alt} width={lilac.images[0].width} height={lilac.images[0].height} loading="eager" decoding="async" />
+                    <span class="product-name">{lilac.title}</span>
+                  </button>
+                  <button class="view-cards" type="button" onClick={event => openGallery(lilac.id, 0, event.currentTarget)}>
+                    СМОТРЕТЬ КАРТОЧКИ →
+                  </button>
+                </article>
+              ) : (
+                <div class="market-placeholder">
+                  <CatalogImage file={file} alt="Место для будущего проекта" />
+                </div>
+              )}
             </>
           )}
         </For>
